@@ -6,9 +6,6 @@ The House is the customer. So there is **no Customer database because it is a ca
 
 This database relational design works hand in glove with **Kartik-v's** three tiered **dependency dropdown**. This thee tiered functionality works perfectly well in the Search Models and also in Kartik's grid's filters enabling quick retrieval of house records.
 
-The Default is **shared hosting** with a subscription through **paypal's rest-api-sdk***. 
-**10** companies/divisions/units can signup to your site. Users all get a **Free Subscription Privilege permission** from either their **Udb role for employees** or their **Mdb role for managers**. All Udb roles fall under the **employee role**. All Mdb roles fall under the **support role**. As a result the **paypal** service config details do **not** have to be setup if all users keep their **Subscription Free Privilege**. (frontend/modules/subscription/components/Configpaypal).
+All Udb roles fall under the **employee role**. All Mdb roles fall under the **support role**. 
 
-Each database works separately from the others. Each database shares the frontend code. How does this happen? Each model has the userDb() function. This function gives a database to  a user at login by using the function **frontend/components/ Utiilites::userLogin_set_database**. When the user registers, the administrator must match a role to the user . Each database has 2 roles. **eg. Mdb1 and Udb1 for db1** . Both have the permission **Access db1**. So when the administrator matches the user to a role eg. Udb1, and makes this connection 'active', the user can access db1.  
-
-The first user to sign up gets the admin role. Admin matches all users of companies or divisions to role.   [Back](/md/faq/faqs.md)
+The first user to sign up gets the admin role. [Back](/md/faq/faqs.md)
