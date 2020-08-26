@@ -18,18 +18,14 @@
 
 [**How to use the package?**](/md/faq/package.md)
 
-[**I am a sole trader with one employee and do not intend to use all 10 databases. How do I setup my users after installation?**](/md/faq/soletrader.md)
+[**I am a sole trader with one employee. How do I setup my users after installation?**](/md/faq/soletrader.md)
 
 [**I have adapted the roles and permissions using the RBAC GUI that admin has access to on one site and want to include these in my next migration. How do I transfer these roles and permissions from one site to another?**](/md/faq/transfer.md)
-
-[**Paypal Subscription Feature Know How?**](/md/faq/subscription.md)
 
 [**Security Features Know How?**](/md/faq/security.md)
 
 [**Detailed Installation Steps Know How?**](/md/faq/detailedinstallation.md)
 
 [**How do I setup the Google Translate section of this package?**](/md/faq/googletranslate.md)
-
-[**Which countries can accept Gocardless and how do I adjust my code?**](/md/faq/gocardless.md)
 
 [**What are the most recent improvements to this package?**](/md/faq/mostrecentimprovements.md)
