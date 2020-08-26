@@ -1,0 +1,30 @@
+{
+  "name": "yii2-house2house",
+  "version": "1.0.0",
+  "description": "House to House Management Software eg. Cleaning Services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rossaddison/yii2-house2house.git"
+  },
+  "keywords": [
+    "yii2",
+    "shared-hosting",
+    "paypal",
+    "subscription",
+    "gocardless",
+    "twilio",
+    "sms",
+    "google-translate",
+    "house"
+  ],
+  "author": "Ross Addison",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/rossaddison/yii2-house2house/issues"
+  },
+  "homepage": "https://github.com/rossaddison/yii2-house2house#readme"
+}

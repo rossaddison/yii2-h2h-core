@@ -1,0 +1,1675 @@
+2020-04-27 01:17:26 [-][-][-][error][yii\console\Exception] yii\console\Exception: Vereiste argumente ontbreek: filePath in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php:202
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('config', Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('config', Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/config', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/config', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#8 {main}
+2020-04-27 01:17:26 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1587950246.5621
+    'REQUEST_TIME' => 1587950246
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/config'
+    ]
+    'argc' => 2
+]
+2020-04-27 01:18:16 [-][-][-][error][yii\console\Exception] yii\console\Exception: Languages cannot be empty. in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:956
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig(NULL)
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract(NULL)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-04-27 01:18:16 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1587950296.578
+    'REQUEST_TIME' => 1587950296
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+    ]
+    'argc' => 2
+]
+2020-04-27 01:24:22 [-][-][-][error][yii\console\Exception] yii\console\Exception: Languages cannot be empty. in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:956
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig(NULL)
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract(NULL)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-04-27 01:24:22 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1587950662.5427
+    'REQUEST_TIME' => 1587950662
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+    ]
+    'argc' => 2
+]
+2020-04-27 01:24:36 [-][-][-][error][yii\console\Exception] yii\console\Exception: Vereiste argumente ontbreek: filePath in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php:202
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('config', Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('config', Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/config', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/config', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#8 {main}
+2020-04-27 01:24:35 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1587950675.9351
+    'REQUEST_TIME' => 1587950675
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/config'
+    ]
+    'argc' => 2
+]
+2020-04-27 01:46:45 [-][-][-][error][yii\console\Exception] yii\console\Exception: Languages cannot be empty. in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:956
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig(NULL)
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract(NULL)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-04-27 01:46:44 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1587952004.6144
+    'REQUEST_TIME' => 1587952004
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+    ]
+    'argc' => 2
+]
+2020-04-27 02:19:18 [-][-][-][error][yii\console\Exception] yii\console\Exception: Languages cannot be empty. in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:956
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig(NULL)
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract(NULL)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-04-27 02:19:17 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1587953957.9526
+    'REQUEST_TIME' => 1587953957
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+    ]
+    'argc' => 2
+]
+2020-04-27 02:35:43 [-][-][-][error][yii\console\Exception] yii\console\Exception: Vereiste argumente ontbreek: filePath in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php:202
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('config-template', Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('config-template', Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/config-...', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/config-...', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#8 {main}
+2020-04-27 02:35:43 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1587954943.1266
+    'REQUEST_TIME' => 1587954943
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/config-template'
+    ]
+    'argc' => 2
+]
+2020-04-27 04:34:53 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "messages/extract". in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('messages/extrac...', Array)
+#1 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('messages/extrac...', Array)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "messages/extract". in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php:183
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('messages/extrac...', Array)
+#1 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#3 {main}
+2020-04-27 04:34:53 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1587962093.5916
+    'REQUEST_TIME' => 1587962093
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'messages/extract'
+        2 => '@frontend/messages/template.php'
+    ]
+    'argc' => 3
+]
+2020-04-27 06:49:02 [-][-][-][error][yii\console\Exception] yii\console\Exception: Onbekende opsie: --migratePath. Options available: --color, --interactive, --help, --migrationPath, --migrationNamespaces, --compact, --migrationTable, --db in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php:155
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#1 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#5 {main}
+2020-04-27 06:49:02 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1587970142.0983
+    'REQUEST_TIME' => 1587970142
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'migrate'
+        2 => '--db=db'
+        3 => '--migratePath=@yii/i18n/migrations'
+    ]
+    'argc' => 4
+]
+2020-04-27 07:14:26 [-][-][-][error][yii\console\Exception] yii\console\Exception: Languages cannot be empty. in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:956
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig(NULL)
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract(NULL)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-04-27 07:14:26 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1587971666.1965
+    'REQUEST_TIME' => 1587971666
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+    ]
+    'argc' => 2
+]
+2020-04-27 15:54:09 [-][-][-][error][yii\console\Exception] yii\console\Exception: The message path C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\frontend\messages\messages is not a valid directory. in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:952
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig('C:\\Users\\rossa\\...')
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract('@frontend/messa...')
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-04-27 15:54:09 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1588002849.6782
+    'REQUEST_TIME' => 1588002849
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+        2 => '@frontend/messages/config.php'
+    ]
+    'argc' => 3
+]
+2020-04-27 19:23:27 [-][-][-][error][yii\console\Exception] yii\console\Exception: The message path C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\frontend\messages\messages is not a valid directory. in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:952
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig('C:\\Users\\rossa\\...')
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract('@frontend/messa...')
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-04-27 19:23:27 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1588015407.4724
+    'REQUEST_TIME' => 1588015407
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+        2 => '@frontend/messages/config.php'
+    ]
+    'argc' => 3
+]
+2020-05-01 10:16:15 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "messages". in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('messages', Array)
+#1 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('messages', Array)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "messages". in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php:183
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('messages', Array)
+#1 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#3 {main}
+2020-05-01 10:16:15 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'GOOGLE_APPLICATION_CREDENTIALS' => 'C:\\Users\\rossa\\OneDrive\\Desktop'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1588328175.357
+    'REQUEST_TIME' => 1588328175
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'messages'
+    ]
+    'argc' => 2
+]
+2020-05-01 10:16:22 [-][-][-][error][yii\console\Exception] yii\console\Exception: The configuration file does not exist: help in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:925
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig('help')
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract('help')
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-05-01 10:16:22 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'GOOGLE_APPLICATION_CREDENTIALS' => 'C:\\Users\\rossa\\OneDrive\\Desktop'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1588328182.7094
+    'REQUEST_TIME' => 1588328182
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message'
+        2 => 'help'
+    ]
+    'argc' => 3
+]
+2020-05-01 10:17:44 [-][-][-][error][yii\console\Exception] yii\console\Exception: Languages cannot be empty. in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:956
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig(NULL)
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract(NULL)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-05-01 10:17:44 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'GOOGLE_APPLICATION_CREDENTIALS' => 'C:\\Users\\rossa\\OneDrive\\Desktop'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1588328264.0812
+    'REQUEST_TIME' => 1588328264
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+    ]
+    'argc' => 2
+]
+2020-05-01 10:32:04 [-][-][-][error][yii\console\Exception] yii\console\Exception: The configuration file does not exist: --@frontend/messages/template.php in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:925
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig('--@frontend/mes...')
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract('--@frontend/mes...')
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-05-01 10:32:04 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'GOOGLE_APPLICATION_CREDENTIALS' => 'C:\\Users\\rossa\\OneDrive\\Desktop'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1588329124.7771
+    'REQUEST_TIME' => 1588329124
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+        2 => '--@frontend/messages/template.php'
+    ]
+    'argc' => 3
+]
+2020-05-01 10:32:20 [-][-][-][error][yii\console\Exception] yii\console\Exception: The configuration file does not exist: --/template.php in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:925
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig('--/template.php')
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract('--/template.php')
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-05-01 10:32:20 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'GOOGLE_APPLICATION_CREDENTIALS' => 'C:\\Users\\rossa\\OneDrive\\Desktop'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1588329140.5976
+    'REQUEST_TIME' => 1588329140
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+        2 => '--/template.php'
+    ]
+    'argc' => 3
+]
+2020-05-01 10:33:16 [-][-][-][error][yii\console\Exception] yii\console\Exception: The configuration file does not exist: C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\console/messages/template.php in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php:925
+Stack trace:
+#0 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\MessageController.php(298): yii\console\controllers\MessageController->initConfig('C:\\Users\\rossa\\...')
+#1 [internal function]: yii\console\controllers\MessageController->actionExtract('@app/messages/t...')
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('extract', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#10 {main}
+2020-05-01 10:33:16 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'GOOGLE_APPLICATION_CREDENTIALS' => 'C:\\Users\\rossa\\OneDrive\\Desktop'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1588329196.8731
+    'REQUEST_TIME' => 1588329196
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'message/extract'
+        2 => '@app/messages/template.php'
+    ]
+    'argc' => 3
+]
+2020-05-01 14:47:33 [-][-][-][error][yii\console\Exception] yii\console\Exception: You should specify cache components names in C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\controllers\CacheController.php:78
+Stack trace:
+#0 [internal function]: yii\console\controllers\CacheController->actionFlush()
+#1 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Controller.php(164): yii\base\Controller->runAction('flush', Array)
+#4 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('flush', Array)
+#5 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('cache/flush', Array)
+#6 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('cache/flush', Array)
+#7 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 C:\Users\rossa\OneDrive\Documents\GitHub\yii2-house2house\yii(23): yii\base\Application->run()
+#9 {main}
+2020-05-01 14:47:33 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-0A1VHFM'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'GOOGLE_APPLICATION_CREDENTIALS' => 'C:\\Users\\rossa\\OneDrive\\Desktop'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-0A1VHFM'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Local\\ComposerSetup\\bin;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp64\\bin\\php\\php7.4.4;C:\\wamp64\\bin\\mysql\\mysql5.7.29\\bin;C:\\Users\\rossa\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-0A1VHFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-0A1VHFM'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\'
+    'PHP_SELF' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_NAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'PATH_TRANSLATED' => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1588344453.8264
+    'REQUEST_TIME' => 1588344453
+    'argv' => [
+        0 => 'C:\\Users\\rossa\\OneDrive\\Documents\\GitHub\\yii2-house2house\\yii'
+        1 => 'cache/flush'
+    ]
+    'argc' => 2
+]
+2020-08-21 18:40:09 [-][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\migrations\m200627_075111_product_productnumber_fix_width' in file: C:\wamp64\www\simplified/frontend/migrations/m200627_075111_product_productnumber_fix_width.php. Namespace missing? in C:\wamp64\www\simplified\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\migrat...')
+#1 [internal function]: spl_autoload_call('frontend\\migrat...')
+#2 C:\wamp64\www\simplified\vendor\yiisoft\yii2\di\Container.php(447): ReflectionClass->__construct('frontend\\migrat...')
+#3 C:\wamp64\www\simplified\vendor\yiisoft\yii2\di\Container.php(374): yii\di\Container->getDependencies('frontend\\migrat...')
+#4 C:\wamp64\www\simplified\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('frontend\\migrat...', Array, Array)
+#5 C:\wamp64\www\simplified\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('frontend\\migrat...', Array, Array)
+#6 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\controllers\MigrateController.php(202): yii\BaseYii::createObject(Array)
+#7 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(726): yii\console\controllers\MigrateController->createMigration('frontend\\migrat...')
+#8 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(202): yii\console\controllers\BaseMigrateController->migrateUp('frontend\\migrat...')
+#9 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#10 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#12 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('', Array)
+#13 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#14 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate-db-name...', Array)
+#15 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate-db-name...', Array)
+#16 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#17 C:\wamp64\www\simplified\yii(23): yii\base\Application->run()
+#18 {main}
+2020-08-21 18:35:55 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-1N08PFU'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-1N08PFU'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-1N08PFU'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-1N08PFU'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\wamp64\\www\\simplified\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\simplified\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\simplified\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\simplified\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\simplified\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598034955.1392
+    'REQUEST_TIME' => 1598034955
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\simplified\\yii'
+        1 => 'migrate-db-namespaced'
+    ]
+    'argc' => 2
+]
+2020-08-21 19:01:17 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'h2h_db.source_message' doesn't exist in C:\wamp64\www\simplified\vendor\yiisoft\yii2\db\Command.php:1293
+Stack trace:
+#0 C:\wamp64\www\simplified\vendor\yiisoft\yii2\db\Command.php(1293): PDOStatement->execute()
+#1 C:\wamp64\www\simplified\vendor\yiisoft\yii2\db\Command.php(1159): yii\db\Command->internalExecute('SELECT `id`, `c...')
+#2 C:\wamp64\www\simplified\vendor\yiisoft\yii2\db\Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 C:\wamp64\www\simplified\vendor\yiisoft\yii2\db\Query.php(248): yii\db\Command->queryAll()
+#4 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\controllers\MessageController.php(354): yii\db\Query->all(Object(yii\db\Connection))
+#5 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\controllers\MessageController.php(333): yii\console\controllers\MessageController->saveMessagesToDb(Array, Object(yii\db\Connection), '{{%source_messa...', '{{%message}}', false, Array, true)
+#6 [internal function]: yii\console\controllers\MessageController->actionExtract('@frontend/messa...')
+#7 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('extract', Array)
+#10 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#11 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#12 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#13 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 C:\wamp64\www\simplified\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'h2h_db.source_message' doesn't exist
+The SQL being executed was: SELECT `id`, `category`, `message` FROM `source_message` in C:\wamp64\www\simplified\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 C:\wamp64\www\simplified\vendor\yiisoft\yii2\db\Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'SELECT `id`, `c...')
+#1 C:\wamp64\www\simplified\vendor\yiisoft\yii2\db\Command.php(1159): yii\db\Command->internalExecute('SELECT `id`, `c...')
+#2 C:\wamp64\www\simplified\vendor\yiisoft\yii2\db\Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 C:\wamp64\www\simplified\vendor\yiisoft\yii2\db\Query.php(248): yii\db\Command->queryAll()
+#4 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\controllers\MessageController.php(354): yii\db\Query->all(Object(yii\db\Connection))
+#5 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\controllers\MessageController.php(333): yii\console\controllers\MessageController->saveMessagesToDb(Array, Object(yii\db\Connection), '{{%source_messa...', '{{%message}}', false, Array, true)
+#6 [internal function]: yii\console\controllers\MessageController->actionExtract('@frontend/messa...')
+#7 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('extract', Array)
+#10 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('extract', Array)
+#11 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('message/extract', Array)
+#12 C:\wamp64\www\simplified\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('message/extract', Array)
+#13 C:\wamp64\www\simplified\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 C:\wamp64\www\simplified\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'h2h_db.source_message' doesn't exist
+)
+
+2020-08-21 19:01:15 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\rossa\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-1N08PFU'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\rossa'
+    'LOCALAPPDATA' => 'C:\\Users\\rossa\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-1N08PFU'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OneDrive' => 'C:\\Users\\rossa\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\rossa\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\rossa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\rossa\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '170a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\rossa\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-1N08PFU'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-1N08PFU'
+    'USERNAME' => 'rossa'
+    'USERPROFILE' => 'C:\\Users\\rossa'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\wamp64\\www\\simplified\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\simplified\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\simplified\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\simplified\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\simplified\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598036475.3493
+    'REQUEST_TIME' => 1598036475
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\simplified\\yii'
+        1 => 'message/extract'
+        2 => '@frontend/messages/template.php'
+    ]
+    'argc' => 3
+]
