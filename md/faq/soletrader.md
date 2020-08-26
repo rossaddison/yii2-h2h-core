@@ -2,7 +2,7 @@ The first user to signup is automatically assigned the administrator or 'admin' 
 
 The admin role by default accesses the default db database because it is assigned the 'Access db' permission.  
 
-Setup a Udb role similar to Udb1 for your employee with appropriate permissions. Signup your employee and assign the **Udb0** role to them. Make sure you have assigned the **'Access db'** permission to this user.  [Back](/md/faq/faqs.md)
+Signup your employee and assign the **Udb0** role to them. Make sure you have assigned the **'Access db'** permission to this user.  [Back](/md/faq/faqs.md)
 
 **You will not need to setup the Mdb0 role.** The admin role by default has all the permissions that a manager has with their support role.  
 
