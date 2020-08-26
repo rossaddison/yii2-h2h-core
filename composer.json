@@ -5,8 +5,8 @@
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/rossaddison/yii2-house2house-single-user/issues?state=open",
-        "source": "https://github.com/rossaddison/yii2-house2house-single-user/"
+        "issues": "https://github.com/rossaddison/yii2-h2h-1db/issues?state=open",
+        "source": "https://github.com/rossaddison/yii2-h2h-1db/"
     },
     "minimum-stability": "stable",
     "require": {
