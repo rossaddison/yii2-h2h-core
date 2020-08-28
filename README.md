@@ -10,7 +10,7 @@ Copyright 2020  House2House  [BSD-3-Clause](/licence.md)
 
 **Composer**
 
-    "rossaddison\yii2-h2h-d1": "*", 
+    "rossaddison\yii2-h2h-1db": "*", 
 
 [**Frequently Asked Questions ?**](/md/faq/faqs.md)
 
