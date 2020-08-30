@@ -1,12 +1,12 @@
 {
-    "name": "rossaddison/yii2-house2house-single-user",
+    "name": "rossaddison/yii2-h2h-core",
     "description": "House to House Management Software eg. Cleaning Services",
     "keywords": ["yii2", "shared-hosting","house","twilio","sms","google-translate"],
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/rossaddison/yii2-h2h-1db/issues?state=open",
-        "source": "https://github.com/rossaddison/yii2-h2h-1db/"
+        "issues": "https://github.com/rossaddison/yii2-h2h-core/issues?state=open",
+        "source": "https://github.com/rossaddison/yii2-h2h-core/"
     },
     "minimum-stability": "stable",
     "require": {
