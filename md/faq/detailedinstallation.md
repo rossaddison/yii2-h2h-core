@@ -29,18 +29,6 @@ Regarding the above Yii migrate command, it will look at the db component contai
 
 This command will use the migration paths contained in **console**/config/main.php. There are currently 4 paths sjaakp/pluto,   frontend/migrations, paypal, and auth. Although the migration generator Gii created these migrations from tables, they have been namespaced ("pathed") ie. the word **Namespace** has been manually inserted at the top of the migration file generated and placed in the relevant folder on that **path/namespace** after Gii generated the migration file from the developer's table.  [Back](/md/faq/faqs.md)
 
-**Installation Steps for subsequent manager databases 'db1','db2' and not admin database 'db'** 
-
-1. Linux via eg. Putty for your **subsequent** databases: 
-
-       php yii migrate-db1
-       
-1. If on your localhost on windows: 
-
-       yii migrate-db1
-
-1. Repeat this process up until the 10th database if you intend to share your site to up to 10 companies. As you have probably noticed all 10 commands are contained in **console**/config/main.php under the controllerMap.  [Back](/md/faq/faqs.md)
-
 1. In order to sign up your first user, you will have to make sure that **'fencemode'** is switched off. The fencemode setting under frontend/config/main.php can be set to a **boolean** or to a **string**. It is currently set to a string. By default the Fence Mode role has not been assigned the **'User can Login but not Signup - Fence Mode On'** permission. So the first guest can signup and acquire the admin role.   [Back](/md/faq/faqs.md)
 
 **frontend/config/main.php**
