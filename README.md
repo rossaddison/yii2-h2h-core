@@ -1,4 +1,4 @@
-**yii2-h2h-1db**
+**yii2-h2h-core**
 
 **Licence**
 
@@ -10,7 +10,7 @@ Copyright 2020  House2House  [BSD-3-Clause](/licence.md)
 
 **Composer**
 
-    "rossaddison\yii2-h2h-1db": "*", 
+    "rossaddison\yii2-h2h-core": "*", 
 
 [**Frequently Asked Questions ?**](/md/faq/faqs.md)
 
