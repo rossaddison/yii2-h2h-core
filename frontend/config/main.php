@@ -7,7 +7,7 @@ Use frontend\modules\subscription\components\SessionHelper;
 
 return [
     'id' => 'app-frontend',
-    'name'=>Yii::t('app','House 2 House - Simplified'),
+    'name'=>Yii::t('app','House 2 House - Core'),
     'timezone' => 'UTC',
     //in your own language change the following after using H2H's Google Translate Module.
     //or set the Company...Settings...Language...setting.
