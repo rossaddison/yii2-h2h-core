@@ -92,18 +92,7 @@ $tooltipgocardlesscustomer = Html::tag('span', 'Gocardless'. Yii::t('app','Manda
    <Hr style = "border-top: 3px double #8c8b8b">
    <?= Html::a(Yii::t('app','Back'), Url::previous(), ['class' => 'btn btn-success btn-lg']) ?>    
         <Hr style = "border-top: 3px double #8c8b8b">
-   <?php if (Yii::$app->user->can('Create Gocardlesscustomer')) { ?>
-   <button id="w65" class = "btn btn-info  btn-lg" onclick="js:getCreategocardlesscustomer()" title="<?php Yii::t('app','Clicking here will send an email to this customer, that you have ticked, with a link to the direct debit mandate created by the Gocardless API. The customer must approve this mandate within 30 minutes otherwise you will have to resend. The email will have a link to the '). 'Gocardless'. Yii::t('app',' website. Once the customer has entered their bank details on the '). 'Gocardless'. Yii::t('app',' website they will be redirected to this website to a Thank you for approval message. You will then have to acknowledge this mandate by pressing the button above House on the main menu.  Only then will you be able to send Payment Requests via email with the adjacent button: An email will be sent to the customer with a breakdown of the payment. This email will be followed up with an email from' ). 'Gocardless' ?>" data-toggle="tooltip"><?php echo Yii::t('app','Email Direct Debit Mandate Link to Customer for their approval. (tick)') ?></button>
-   <Hr style = "border-top: 3px double #8c8b8b"> 
-   <button id="w665" class = "btn btn-info  btn-lg" onclick="js:getRequestgocardlesspayment()" title="<?php Yii::t('app','Clicking here will send an email to this customer, that you have ticked, informing them that you are requesting payment. Payment amounts must not be less than &pound 1.') ?>" data-toggle="tooltip"><?php echo Yii::t('app','Email Payment Request to Customer. (tick)') ?></button>
-   <Hr style = "border-top: 3px double #8c8b8b">     
-   <?php } ?>
-   <?php if (!Yii::$app->user->can('Create Gocardlesscustomer')) { ?>
-   <button id="w65" class = "btn btn-info" onclick="js:getCreategocardlesscustomer()" disabled = "disabled" title="Enable in Other ... Company Settings. Signup with Gocardless  under your company name and get an Access token from Gocardless. Enter this access token under Other...Company...Gocardless Access Token. Change Sandbox to Live under Company settings. Once setup, clicking on this button will send an email to this customer, that you have ticked, with a link to the direct debit mandate created by the Gocardless API. The email will have a link to the Gocardless website. Once the customer has entered their bank details on the Gocardless website a confirmation of approval email will be sent by Gocardless to Company...email. Only then will you be able to issue a payment request by pressing the adjacent button. Your payment request total must exceed 100. Also make sure you have setup the Customer Email Address by clicking on the view button below." data-toggle="tooltip"><?php echo Yii::t('app','Email Direct Debit Mandate Link to Customer for their approval. (tick)') ?></button>
-   <Hr style = "border-top: 3px double #8c8b8b"> 
-   <button id="w665" class = "btn btn-info  btn-lg" onclick="js:getRequestgocardlesspayment()" disabled = "disabled" title="Clicking here will send an email to this customer, that you have ticked, informing them that you are requesting payment. Payment amounts must not be less than &pound 1." data-toggle="tooltip"><?php echo Yii::t('app','Email Payment Request to Customer. (tick)') ?></button>
-   <Hr style = "border-top: 3px double #8c8b8b">     
-   <?php } ?>   
+     
        <div class="info">
         <?=          
            Alert::widget()
