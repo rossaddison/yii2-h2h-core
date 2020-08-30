@@ -29,7 +29,6 @@ Copyright 2020  House2House  [BSD-3-Clause](/licence.md)
 1. Signup first user who will automatically be made active as administrator.
 1. Signup addtional users. The administrator will have to be make them active.
 
-[Roles and Permissions Diagram](/downloadfile/Roles%20and%20Permissions.pdf) 
 
 
 
