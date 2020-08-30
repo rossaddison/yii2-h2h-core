@@ -9,7 +9,6 @@
 
 This will install the dependencies that are under 'require' under composer.json into the vendor folder.
 1. Make sure that your frontend/config/main.php is properly configured especially the mailer component so that you can register your first user which will inherit admin rights. Ensure that libra - fencemode is off to be able to register.
-1. Make sure that your frontend/modules/subscriptions/components/configpaypal.php is properly configured when you opt to use subscriptions although by default this will be ignored as long as you keep the **Subscription Free Privilege permission** assigned to the respective Udb role or Mdb role relevant to the database or, if you elect not to have it linked to these roles, the higher 'more universal' roles of 'employee' and 'support' respectively.
 1. Upload these folders to the web/public-html folder using ftp (File Transfer Protocol) upload software eg. **filezilla** to your host eg. one.com, godaddy.com
 1. Ensure that your databases on your host correspond to the number of databases in the four files mentioned below i,ii,iii,iv.  [Back](/md/faq/faqs.md)
 
@@ -21,7 +20,7 @@ This will install the dependencies that are under 'require' under composer.json 
 
        Search...Environment Settings...Advanced...Environment Variables...User variables...PATH...edit, for 'path'.
    
-1. **Install the sjaakp/pluto migration, frontend/migrations, paypal module migration, and auth migration with the following command at your command prompt:** 
+1. **Install the sjaakp/pluto migration, frontend/migrations, and auth migration with the following command at your command prompt:** 
    
        php yii migrate-db-namespaced  (linux eg. putty) 
        yii migrate-db-namespaced      (if a defined php path eg. c:\wamp64\bin\php\php7.4.4 in *environment settings* under windows)
@@ -41,14 +40,6 @@ This command will use the migration paths contained in **console**/config/main.p
        yii migrate-db1
 
 1. Repeat this process up until the 10th database if you intend to share your site to up to 10 companies. As you have probably noticed all 10 commands are contained in **console**/config/main.php under the controllerMap.  [Back](/md/faq/faqs.md)
-
-**Installation Steps if wanting more than 10 independent sharers.** 
-
-1. If you have more than 10 companies/divisions/units that you as administrator are wanting to signup you will need to edit the following three files:
-
-    1. *frontend/**components**/Utilities::userLogin_set_database(). Include additional databases here using the naming convention eg. db1, db2*
-    1. ***common**/config/main-local.php - Follow the naming convention eg. db1, db2*
-    1. ***console**/config/main.php - edit and replicate the commands in the **controllerMap** for migrations over and above the 10 databases.*
 
 1. In order to sign up your first user, you will have to make sure that **'fencemode'** is switched off. The fencemode setting under frontend/config/main.php can be set to a **boolean** or to a **string**. It is currently set to a string. By default the Fence Mode role has not been assigned the **'User can Login but not Signup - Fence Mode On'** permission. So the first guest can signup and acquire the admin role.   [Back](/md/faq/faqs.md)
 
