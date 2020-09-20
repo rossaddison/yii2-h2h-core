@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fece7956972dc9a9c72ed0cd438e970b",
+    "content-hash": "4b47696e3a25d82fff1bdc9fc56b72b3",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
@@ -231,7 +231,7 @@
             "version": "3.5.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
             },
             "dist": {
@@ -824,58 +824,6 @@
                 "php"
             ],
             "time": "2020-03-25T18:49:23+00:00"
-        },
-        {
-            "name": "gocardless/gocardless-pro",
-            "version": "3.6.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gocardless/gocardless-pro-php.git",
-                "reference": "1e9b016337b2e11d67dc1c9300baea61c1a1b2a2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gocardless/gocardless-pro-php/zipball/1e9b016337b2e11d67dc1c9300baea61c1a1b2a2",
-                "reference": "1e9b016337b2e11d67dc1c9300baea61c1a1b2a2",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "guzzlehttp/guzzle": "^6.0",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "phpdocumentor/phpdocumentor": "2.*",
-                "phpunit/phpunit": "4.6.*",
-                "satooshi/php-coveralls": "~0.6.1",
-                "squizlabs/php_codesniffer": "~2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "GoCardlessPro\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "GoCardless and contributors",
-                    "homepage": "https://github.com/gocardless/gocardless-pro-php/contributors"
-                }
-            ],
-            "description": "GoCardless Pro PHP Client Library",
-            "homepage": "https://gocardless.com/",
-            "keywords": [
-                "api",
-                "direct debit",
-                "gocardless"
-            ],
-            "time": "2020-04-02T13:14:40+00:00"
         },
         {
             "name": "google/auth",
@@ -1845,6 +1793,12 @@
                 "glyphicon",
                 "star",
                 "svg"
+            ],
+            "funding": [
+                {
+                    "url": "https://opencollective.com/bootstrap-star-rating",
+                    "type": "open_collective"
+                }
             ],
             "time": "2019-10-04T13:34:11+00:00"
         },
@@ -7172,16 +7126,16 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.37",
+            "version": "2.0.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "e8094d1aa9e807fbea970bc1360ab836ffb1b738"
+                "reference": "fd01e747cc66a049ec105048f0ab8dfbdf60bf4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/e8094d1aa9e807fbea970bc1360ab836ffb1b738",
-                "reference": "e8094d1aa9e807fbea970bc1360ab836ffb1b738",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/fd01e747cc66a049ec105048f0ab8dfbdf60bf4b",
+                "reference": "fd01e747cc66a049ec105048f0ab8dfbdf60bf4b",
                 "shasum": ""
             },
             "require": {
@@ -7282,7 +7236,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-08-07T20:11:56+00:00"
+            "time": "2020-09-14T21:52:10+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -8062,6 +8016,58 @@
                 "fixtures"
             ],
             "time": "2019-12-12T13:22:17+00:00"
+        },
+        {
+            "name": "gocardless/gocardless-pro",
+            "version": "3.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gocardless/gocardless-pro-php.git",
+                "reference": "1e9b016337b2e11d67dc1c9300baea61c1a1b2a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gocardless/gocardless-pro-php/zipball/1e9b016337b2e11d67dc1c9300baea61c1a1b2a2",
+                "reference": "1e9b016337b2e11d67dc1c9300baea61c1a1b2a2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "^6.0",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "2.*",
+                "phpunit/phpunit": "4.6.*",
+                "satooshi/php-coveralls": "~0.6.1",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GoCardlessPro\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "GoCardless and contributors",
+                    "homepage": "https://github.com/gocardless/gocardless-pro-php/contributors"
+                }
+            ],
+            "description": "GoCardless Pro PHP Client Library",
+            "homepage": "https://gocardless.com/",
+            "keywords": [
+                "api",
+                "direct debit",
+                "gocardless"
+            ],
+            "time": "2020-04-02T13:14:40+00:00"
         },
         {
             "name": "opis/closure",
@@ -10241,7 +10247,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4.1"
+        "php": ">=7.4.9"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
