@@ -80,8 +80,9 @@ $tooltipgocardlesscustomer = Html::tag('span', 'Gocardless'. Yii::t('app','Manda
 <h1><?= Html::encode($this->title) ?></h1>
 <?= 
    //Modal link frontend/layouts/main.php and frontend/assets/AppAsset.php
-   Html::button(Yii::t('app','Create House'), ['value' => Url::to(['product/create']), 'title' => Yii::t('app','Creating New House'), 'class' => 'showModalButton btn btn-success btn-lg','title'=>Yii::t('app','Have you setup your Postcode and street?'),'data-toggle'=>'tooltip']); 
-?>
+   //Html::button(Yii::t('app','Create House'), ['value' => Url::to(['product/create']), 'title' => Yii::t('app','Creating New House'), 'class' => 'showModalButton btn btn-success btn-lg','title'=>Yii::t('app','Have you setup your Postcode and street?'),'data-toggle'=>'tooltip']); 
+   Html::a(Yii::t('app','Create House'), Url::to(['/product/create']), ['class' => 'btn btn-success btn-lg','title'=>Yii::t('app','Have you setup your Postcode and street?'),'data-toggle'=>'tooltip']); 
+ ?>
 <?php 
    //Html::a(Yii::t('app','Create House'), ['create'], ['class' => 'btn btn-success btn-lg','title'=>Yii::t('app','Have you setup your Postcode and street?'),'data-toggle'=>'tooltip']) 
 ?>
