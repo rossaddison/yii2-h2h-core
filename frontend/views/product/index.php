@@ -274,7 +274,7 @@ echo Slider::widget([
                         $url2 = "https://maps.google.com/maps?q=".ltrim($dataProvider->productnumber, '0')." ".$dataProvider->productsubcategory->name." ".$dataProvider->productcategory->name;
                        return Html::a($dataProvider->productsubcategory->name,$url2);
              },
-            'filter'=> Html::activeDropDownList($searchModel,'productsubcategory_id',ArrayHelper::map(Productsubcategory::find()->where(['id'=>$searchModel->productcategory_id])->orderBy('name')->asArray()->all(),'id','name'),[ 'options' => ['style'=> 'font-size:'.Yii::$app->session['sliderfontproduct'].'px'],'class'=>'form-control','prompt'=>'Street...']),
+            'filter'=> Html::activeDropDownList($searchModel,'productsubcategory_id',ArrayHelper::map(Productsubcategory::find()->where(['productcategory_id'=>$searchModel->productcategory_id])->orderBy('name')->asArray()->all(),'id','name'),[ 'options' => ['style'=> 'font-size:'.Yii::$app->session['sliderfontproduct'].'px'],'class'=>'form-control','prompt'=>'Street...']),
     ],
     [
     'class' => 'kartik\grid\EditableColumn',
