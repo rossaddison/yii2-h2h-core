@@ -499,6 +499,7 @@ class m191110_221831_Mass extends Migration
             $this->dropForeignKey('fk_works_salesorderdetail_product_id', '{{%works_salesorderdetail}}');
             $this->dropForeignKey('fk_works_salesorderdetail_sales_order_id', '{{%works_salesorderdetail}}');
             $this->dropForeignKey('fk_works_salesorderheader_employee_id', '{{%works_salesorderheader}}');
+            $this->dropForeignKey('fk_message_id', '{{%message}}');
             $this->dropTable('{{%works_carousal}}');
             $this->dropTable('{{%works_company}}');
             $this->dropTable('{{%works_cost}}');
