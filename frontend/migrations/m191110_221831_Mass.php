@@ -349,6 +349,28 @@ class m191110_221831_Mass extends Migration
         ], $tableOptions);
 
         $this->createIndex('tax_id','{{%works_tax}}',['tax_id'],false);
+        
+        $this->createTable(
+            '{{%source_message}}',
+            [
+                'id'=> $this->primaryKey(11),
+                'category'=> $this->string(255)->null()->defaultValue(null),
+                'message'=> $this->text()->null()->defaultValue(null),
+            ],$tableOptions
+        );
+        $this->createIndex('idx_source_message_category','{{%source_message}}',['category'],false);
+                
+        $this->createTable(
+            '{{%message}}',
+            [
+                'id'=> $this->integer(11)->notNull(),
+                'language'=> $this->string(16)->notNull(),
+                'translation'=> $this->text()->null()->defaultValue(null),
+            ],$tableOptions
+        );
+        $this->createIndex('idx_message_language','{{%message}}',['language'],false);
+        $this->addPrimaryKey('pk_on_message','{{%message}}',['id','language']);
+        
         $this->addForeignKey(
             'fk_works_cost_costsubcategory_id',
             '{{%works_cost}}', 'costsubcategory_id',
@@ -493,6 +515,11 @@ class m191110_221831_Mass extends Migration
             $this->dropTable('{{%works_quotation}}');        
             $this->dropTable('{{%works_salesorderdetail}}');
             $this->dropTable('{{%works_salesorderheader}}');
-            $this->dropTable('{{%works_tax}}');
+            $this->dropTable('{{%works_tax}}'); 
+            $this->dropIndex('idx_source_message_category', '{{%source_message}}');            
+            $this->dropTable('{{%source_message}}');       
+            $this->dropPrimaryKey('pk_on_message','{{%message}}');
+            $this->dropIndex('idx_message_language', '{{%message}}');
+            $this->dropTable('{{%message}}');
     }
 }
