@@ -3,7 +3,7 @@ Namespace frontend\migrations;
 
 use yii\db\Migration;
 
-class m210304_155620_auth_itemDataInsert extends Migration
+class m210305_155620_auth_itemDataInsert extends Migration
 {
     public function safeUp()
     {
