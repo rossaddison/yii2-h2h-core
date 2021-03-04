@@ -473,6 +473,11 @@ class m191110_221831_Mass extends Migration
             '{{%works_employee}}', 'id',
             'NO ACTION', 'NO ACTION'
         );
+        $this->addForeignKey('fk_message_id',
+            '{{%message}}','id',
+            '{{%source_message}}','id',
+            'NO ACTION','NO ACTION'
+         );
     }
 
     public function safeDown()
