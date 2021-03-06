@@ -29,6 +29,13 @@ Copyright 2020  House2House  [BSD-3-Clause](/licence.md)
 1. Signup first user who will automatically be made active as administrator.
 1. Signup addtional users. The administrator will have to be make them active.
 
+**Tested on - 6th March 2021**
+1. Wampserver 3.2.4 - 64 bit
+1. Windows 10
+1. mySql 5.7.31
+1. php 7.4.9
+1. Apache Netbeans IDE 12 
+
 
 
 
