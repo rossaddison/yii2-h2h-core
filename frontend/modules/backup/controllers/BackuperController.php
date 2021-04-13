@@ -65,7 +65,7 @@ class BackuperController extends Controller
     {
            $model = new DumpModel(); 
            try {
-                $database_handle = $model->getDatabasehandle();
+                $database_handle = 'db';
                 $database = Yii::$app->$database_handle->createCommand("SELECT DATABASE()")->queryScalar();
                 $dumpit = new IMysqldump\Mysqldump('mysql:host=localhost;dbname='.$database.'', Yii::$app->$database_handle->username, Yii::$app->$database_handle->password);
                 $basepath = \Yii::getAlias('@webroot');
