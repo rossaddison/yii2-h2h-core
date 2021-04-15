@@ -1,9 +1,10 @@
 <?php
 use \kartik\icons\Icon;
 use yii\helpers\Url;
+use yii\helpers\Html;
 use \kartik\form\ActiveForm;
 $this->title = 'mySql Backup';
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = Html::encode($this->title);
 
 ?>
 <?= \frontend\modules\backup\widgets\Alert::widget() ?>
