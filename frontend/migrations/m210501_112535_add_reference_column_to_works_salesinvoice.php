@@ -8,7 +8,7 @@ class m210501_112535_add_reference_column_to_works_salesinvoice extends Migratio
 
     public function safeUp()
     {
-         $this->addColumn('works_salesinvoice','reference',  $this->string(8)->null()->defaultValue(null));
+         $this->addColumn('works_salesinvoice','reference',  $this->string(8)->notNull());
     }
 
     public function safeDown()
