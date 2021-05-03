@@ -18,12 +18,12 @@ $yearOnly = date('Y', strtotime(Date('Y-m-d')));
     <h1><?= Html::encode($this->title) ?></h1>
     <p> 
     <?php if (Yii::$app->user->can('Manage Admin')){ ?> 
-        <?= 
+        <?php 
             //Modal link frontend/layouts/main.php and frontend/assets/AppAsset.php
-            Html::button(Yii::t('app','Create Daily Clean'), ['value' => Url::to(['salesorderheader/create']), 'title' => Yii::t('app','Creating Daily Clean'), 'class' => 'showModalButton btn btn-success btn-lg']); 
+            //Html::button(Yii::t('app','Create Daily Clean'), ['value' => Url::to(['salesorderheader/create']), 'title' => Yii::t('app','Creating Daily Clean'), 'class' => 'showModalButton btn btn-success btn-lg']); 
         ?>
         <?php 
-            //Html::a(Yii::t('app','Create Daily Clean'), ['create'], ['class' => 'btn btn-success btn-lg','data-toggle'=>'tooltip','title'=>Yii::t('app','Click here to create a shell consisting of the clean date and a job code which is the name of your run. Copy houses from House to this clean date. To replicate this clean date in the future use the Ticked copy button. More than one job code or clean date can be ticked and copied into a new clean date if you are planning to do more than one run on the same day. ')]) 
+            echo Html::a(Yii::t('app','Create Daily Clean'), ['create'], ['class' => 'btn btn-success btn-lg','data-toggle'=>'tooltip','title'=>Yii::t('app','Click here to create a shell consisting of the clean date and a job code which is the name of your run. Copy houses from House to this clean date. To replicate this clean date in the future use the Ticked copy button. More than one job code or clean date can be ticked and copied into a new clean date if you are planning to do more than one run on the same day. ')]) 
         ?>
         <?= Html::a(Yii::t('app','Copy Houses to Daily Clean'), ['product/index'], ['class' => 'btn btn-success btn-lg','data-toggle'=>'tooltip','title'=>Yii::t('app','This will take you to House. Once you have entered your details for the householder you can copy the house across to your clean date.')]) ?>
         <div class="dropdown">
