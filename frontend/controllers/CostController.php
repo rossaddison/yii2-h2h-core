@@ -32,9 +32,8 @@ class CostController extends Controller
                             [
                             'class' => TimestampBehavior::className(),
                             'attributes' => [
-                                                ActiveRecord::EVENT_BEFORE_INSERT => ['nextcost_date',
-                                                'modified_date'],
-                                                ActiveRecord::EVENT_BEFORE_UPDATE => ['modified_date'],
+                                                ActiveRecord::EVENT_BEFORE_INSERT => ['modifieddate'],
+                                                ActiveRecord::EVENT_BEFORE_UPDATE => ['modifieddate'],
                                             ],
                             ],
                 'access' => 
@@ -266,4 +265,3 @@ class CostController extends Controller
         }
    }
 }
-
