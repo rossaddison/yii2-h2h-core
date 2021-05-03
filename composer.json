@@ -11,13 +11,15 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.4.9",
-        "yiisoft/yii2": "~2.0.38",
+        "guzzlehttp/guzzle":"*",
+        "yiisoft/yii2": "~2.0.41.1",
         "yiisoft/yii2-bootstrap": "~2.0.9",
-        "bower-asset/bootstrap": "~3.4.1",
-        "npm-asset/jquery": "^2.2",
-        "bower-asset/ladda": "0.9.8",
         "yiisoft/yii2-bootstrap4": "^2.0.8",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "bower-asset/bootstrap": "~3.4.1",
+        "bower-asset/ladda": "*",        
+        "bower-asset/font-awesome": "~4.7.0.0",
+        "npm-asset/jquery": "^2.2", 
         "sjaakp/yii2-pluto": "*",
         "sjaakp/yii2-dateline": "*",
         "sjaakp/yii2-sortable-behavior": "*",
@@ -30,6 +32,7 @@
         "devgroup/yii2-tag-dependency-helper": "*",
         "warrence/yii2-kartikgii": "dev-master",
         "kartik-v/yii2-bootstrap4-dropdown": "@dev",
+        "kartik-v/bootstrap-fileinput": "dev-master",
         "kartik-v/yii2-editable": "@dev",
         "kartik-v/yii2-grid":"@dev",
         "kartik-v/yii2-widget-timepicker": "@dev",
@@ -41,7 +44,9 @@
         "kartik-v/bootstrap-star-rating": "@dev",
         "kartik-v/yii2-slider": "dev-master",
         "kartik-v/yii2-number" : "@dev",
-        "mpdf/mpdf":"~8.0.0",
+        "kartik-v/yii2-editors": "@dev",
+        "kartik-v/yii2-validators": "dev-master",
+        "mpdf/mpdf":"*",
         "2amigos/yii2-google-maps-library" : "*",
         "2amigos/yii2-ckeditor-widget" : "~2.1",
         "seostats/seostats": "dev-master",
@@ -49,8 +54,12 @@
         "filipajdacic/yii2-twilio": "master@dev",
         "monolog/monolog":"*",
         "ruskid/yii2-csv-importer": "dev-master",
-        "phpoffice/phpspreadsheet":"*", 
-        "league/omnipay": "*",
+        "phpoffice/phpspreadsheet":"*",
+        "league/omnipay": "~3.0",
+        "omnipay/braintree": "~4.0@dev",
+        "lxrco/omnipay-elavon": "~3.0@dev",
+        "dioscouri/omnipay-cybersource": "~3.0@dev",
+        "omnipay/worldpay": "~3.0@dev",
         "paragonie/random_compat": "*",
         "symfony/process": "3.0.*@dev",
         "google/cloud-translate": "*"
@@ -87,7 +96,7 @@
             "setPermission": [
                 {
                     "runtime": "0777",
-                    "web/assets": "0777",
+                    "/assets": "0777",
                     "yii": "0755"
                 }
             ]
