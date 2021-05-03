@@ -25,7 +25,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'status',
         'statusfile',
         ['attribute'=>'employee_id','header'=>'Employee','value'=>$model->employee->title],
-        ['attribute'=>'carousal_id','header'=>'Image/File','value'=>$model->carousalimage->image_source_filename],    
+        //'carousal_id',
+        [
+            'attribute'=>'carousal_id','header'=>'Image/File','value'=>function($model)
+            {if (!empty($model->carousalimage->image_source_filename)) {
+                return $model->carousalimage->image_source_filename;                
+            }
+            else {return "Not linked";}
+        }],
         'clean_date',
         //auto filled from sales order details
         //'sub_total',
@@ -35,3 +42,4 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 </div>
+
