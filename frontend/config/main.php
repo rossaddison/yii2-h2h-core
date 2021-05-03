@@ -3,7 +3,6 @@ $params = array_merge(
     //admin email, support email, bootstrap versioning located under params.php
     require(__DIR__ . '/params.php')
  );
-Use frontend\modules\subscription\components\SessionHelper;
 
 return [
     'id' => 'app-frontend',
@@ -196,6 +195,9 @@ return [
       ],
       'backuper'=> [
              'class' => 'frontend\modules\backup\Module',
+      ],
+      'invoice'=>[
+             'class' => 'frontend\modules\invoice\application\Module',
       ],    
       'gii' => [
       'class' => 'yii\gii\Module', //adding gii module
