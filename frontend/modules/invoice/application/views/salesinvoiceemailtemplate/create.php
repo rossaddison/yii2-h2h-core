@@ -1,0 +1,20 @@
+<?php
+
+use yii\helpers\Html;
+
+/* @var $this yii\web\View */
+/* @var $model frontend\modules\invoice\application\models\Salesinvoiceemailtemplate */
+
+$this->title = Yii::t('app', 'Create Salesinvoiceemailtemplate');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Salesinvoiceemailtemplates'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="salesinvoiceemailtemplate-create">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+
+    <?= $this->render('_form', [
+        'model' => $model,
+    ]) ?>
+
+</div>

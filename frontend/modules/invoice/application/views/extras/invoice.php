@@ -1,0 +1,197 @@
+<?php
+use yii\helpers\Url;
+use frontend\modules\invoice\application\components\Utilities;
+?>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $(function () {
+        var template_fields = ["body", "subject", "from_name", "from_email", "cc", "bcc", "pdf_template"];
+
+        $('#email_template').change(function () {
+            var email_template_id = $(this).val();
+            if (email_template_id === '') return;
+            //https://stackoverflow.com/questions/38299474/yii2-bad-request-400-unable-to-verify-your-data-submission
+            //mailer - use a template function - temporarily disable csrfvalidation to allow the injection of the 
+            //email template. Engage csrf immediately after action.
+            $.post("<?php echo Url::to('uat'); ?>", {
+                email_template_id: email_template_id
+            }, function (data) {
+                <?php echo(YII_DEBUG ? 'console.log(data);' : ''); ?>
+                inject_email_template(template_fields, JSON.parse(data));
+            });
+            //success: alert(template_fields);
+        });
+
+        var selected_email_template = <?php echo $email_template ?>;
+        inject_email_template(template_fields, selected_email_template);
+    });
+
+    $(document).ready(function() {
+        // this is the email invoice window, disable the quote select
+        $('#tags_invoice').prop('disabled', false);
+        $('#tags_quote').prop('disabled', 'disabled');
+    });
+
+</script>
+<form method="post" action="<?= Url::to(['mailer/sendinvoice','invoice_id' => $invoice->invoice_id]); ?>">
+<input type="hidden" name="<?= Yii::$app->request->csrfParam ?>" value="<?= Yii::$app->request->getCsrfToken(); ?>"> 
+    <div id="headerbar">
+        <h1 class="headerbar-title"><?= Utilities::trans('email_invoice'); ?></h1>
+        <div class="headerbar-item pull-right">
+            <div class="btn-group btn-group-sm">
+                <button class="btn btn-primary ajax-loader" name="btn_send" value="1" datatoggle="tooltip" title="<?= Url::to(['mailer/sendinvoice','invoice_id' => $invoice->invoice_id]); ?>">
+                    <i class="fa fa-send"></i>
+                    <?= Utilities::trans('send'); ?>
+                </button>
+                <button class="btn btn-danger" name="btn_cancel" value="1">
+                    <i class="fa fa-times"></i>
+                    <?= Utilities::trans('cancel'); ?>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="to_email"><?= Utilities::trans('to_email'); ?></label>
+                    <input type="email" multiple name="to_email" id="to_email" class="form-control" required
+                           value="<?php
+                                      //the client 'invoiceplane' is equivalent to the house 'h2h' ie. CLIENT table = HOUSE/PRODUCT table
+                                      //model salesinvoice contains the relation customerdetails which links to product model's email
+                                      echo $invoice->customerdetails->email; 
+                                  ?>">
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="email_template"><?= Utilities::trans('email_template'); ?></label>
+                    <select name="email_template" id="email_template" class="form-control simple-select">
+                        <option value=""><?= Utilities::trans('none'); ?></option>
+                        <?php foreach ($email_templates as $email_template): ?>
+                            <option value="<?php echo $email_template->email_template_id; ?>"
+                                <?php $mdl_settings->check_select($selected_email_template, $email_template->email_template_id); ?>>
+                                <?php $echoHelper->_htmlsc($email_template->email_template_title); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="from_name"><?= Utilities::trans('from_name'); ?></label>
+                    <input type="text" name="from_name" id="from_name" class="form-control"
+                           value="<?php $echoHelper->_htmlsc(Yii::$app->params['adminEmailFromName']); ?>">
+                </div>
+                <div class="form-group">
+                    <label for="from_email"><?= Utilities::trans('from_email'); ?></label>
+                    <input type="email" name="from_email" id="from_email" class="form-control"
+                           value="<?php echo Yii::$app->params['adminEmailFromEmail']; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="cc"><?= Utilities::trans('cc'); ?></label>
+                    <input type="text" name="cc" id="cc" 
+                           value="" 
+                           class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="bcc"><?= Utilities::trans('bcc'); ?></label>
+                    <input type="text" name="bcc" id="bcc" 
+                           value=""
+                           class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="subject"><?= Utilities::trans('subject'); ?></label>
+                    <input type="text" name="subject" id="subject" class="form-control"
+                           value="<?=  Utilities::trans('invoice'); ?> #<?php echo $invoice->invoice_id; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="pdf_template"><?=  Utilities::trans('pdf_template'); ?></label>
+                    <select name="pdf_template" id="pdf_template" class="form-control simple-select">
+                        <option value=""><?=  Utilities::trans('none'); ?></option>
+                        <?php foreach ($pdf_templates as $pdf_template): ?>
+                            <option value="<?php echo $pdf_template; ?>"
+                                <?php $mdl_settings->check_select($selected_pdf_template, $pdf_template); ?>>
+                                <?php echo $pdf_template; ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+
+                        <div class="form-group">
+                            <label for="body"><?= Utilities::trans('body'); ?></label>
+                            <br>
+                            <div class="html-tags btn-group btn-group-sm">
+                                <span class="html-tag btn btn-default" data-tag-type="text-paragraph">
+                                    <i class="fa fa-paragraph"></i>
+                                </span>
+                                <span class="html-tag btn btn-default" data-tag-type="text-linebreak">
+                                    &lt;br&gt;
+                                </span>
+                                <span class="html-tag btn btn-default" data-tag-type="text-bold">
+                                    <i class="fa fa-bold"></i>
+                                </span>
+                                <span class="html-tag btn btn-default" data-tag-type="text-italic">
+                                    <i class="fa fa-italic"></i>
+                                </span>
+                            </div>
+                            <div class="html-tags btn-group btn-group-sm">
+                                <span class="html-tag btn btn-default" data-tag-type="text-h1">H1</span>
+                                <span class="html-tag btn btn-default" data-tag-type="text-h2">H2</span>
+                                <span class="html-tag btn btn-default" data-tag-type="text-h3">H3</span>
+                                <span class="html-tag btn btn-default" data-tag-type="text-h4">H4</span>
+                            </div>
+                            <div class="html-tags btn-group btn-group-sm">
+                                <span class="html-tag btn btn-default" data-tag-type="text-code">
+                                    <i class="fa fa-code"></i>
+                                </span>
+                                <span class="html-tag btn btn-default" data-tag-type="text-hr">
+                                    &lt;hr/&gt;
+                                </span>
+                                <span class="html-tag btn btn-default" data-tag-type="text-css">
+                                    CSS
+                                </span>
+                            </div>
+                            <textarea name="body" id="body" rows="8"
+                                      class="email-template-body form-control taggable"></textarea>
+                            <br>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <?= Utilities::trans('preview'); ?>
+                                    <div id="email-template-preview-reload" class="pull-right cursor-pointer">
+                                        <i class="fa fa-refresh"></i>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <iframe id="email-template-preview"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <?php echo Yii::$app->controller->renderPartial('template-tags',['languages'=>$languages]); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <?php echo Yii::$app->controller->renderPartial('dropzone-invoice-html',['languages'=>$languages,'invoice'=>$invoice]); ?>                    
+                </div>
+                <div class="form-group"><label for="invoice-guest-url"><?= Utilities::trans('guest_url'); ?></label>
+                    <div class="input-group">
+                        <input type="text" id="invoice-guest-url" readonly class="form-control"
+                               value="<?= Url::home(true).'invoice/salesinvoice/guestinvoice/'.$invoice->invoice_url_key; ?>">
+                        <div class="input-group-addon to-clipboard cursor-pointer"
+                             data-clipboard-target="#invoice-guest-url">
+                            <i class="fa fa-clipboard fa-fw"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
