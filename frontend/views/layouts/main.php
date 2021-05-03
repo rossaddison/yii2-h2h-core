@@ -116,6 +116,7 @@ $this->registerJs($js);
                             ['label' => str_repeat("&nbsp;", 2).Html::button(Yii::t('app','Email Templates'),['class'=>'btn btn-warning btn-lg']), 'url' => ['/invoice/ip/formlist'],],
                             ['label' => str_repeat("&nbsp;", 3).Html::button(Yii::t('app','Create Sales Invoice'),['class'=>'btn btn-warning btn-lg','title'=>Yii::t('app','Create your Invoices under Revenue..House..Debt Column'),'data-toggle'=>'tooltip']), 'url' => ['@web/product/index'],],
                             ['label' => str_repeat("&nbsp;", 4).Html::button(Yii::t('app','Sales Invoice'),['class'=>'btn btn-warning btn-lg']), 'url' => ['/invoice/salesinvoice'],],
+                            ['label' => str_repeat("&nbsp;", 4).Html::button(Yii::t('app','Sales Invoice Payment Method'),['class'=>'btn btn-warning btn-lg']), 'url' => ['/invoice/salesinvoicemethodpay'],],
                             ['label' => str_repeat("&nbsp;", 5).Html::button(Yii::t('app','Sales Invoice Payment'),['class'=>'btn btn-warning btn-lg']), 'url' => ['/invoice/salesinvoicepayment'],],
                             ['label' => str_repeat("&nbsp;", 6).Html::button(Yii::t('app','Signup an Invoice Payer'),['class'=>'btn btn-warning btn-lg','title'=>Yii::t('app','Give the "Make payment online" permission to the signed up householder/payer.'),'data-toggle'=>'tooltip']), 'url' => ['/libra/signup'],],
                      

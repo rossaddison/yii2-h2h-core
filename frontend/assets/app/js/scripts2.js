@@ -4,13 +4,27 @@ function getKeys (){
     //the sales order id value of the date selected in dropdownlist
     var value = e.options[e.selectedIndex].value;
     $.post({ type: "GET",
-             url: '/product/doit/',
+             url: '/product/transfer/',
         dataType: "json",
         data: {keylist: keys,
                sorder: value
                //salesorder: sord
         },
         success: alert("The following records were copied: " + keys)
+    });
+}
+
+function getAssigntopayer (){
+    var keys = $('#w1').yiiGridView('getSelectedRows'); 
+    var e = document.getElementById("w61");
+    var value = e.options[e.selectedIndex].value;
+    $.post({ type: "GET",
+             url: '/product/assign/',
+        dataType: "json",
+        data: {keylist: keys,
+               onlineuser: value
+        },
+        success: alert("The following houses will be paid by the selected user: " + keys)
     });
 }
 
@@ -223,10 +237,7 @@ function getNotcleanedticks (){
         },
         success: $.pjax.reload({container:'#kv-unique-id-1'})        
     });
-
 }
-
-
 
 function getMissedticks (){
     var keys = $('#w0').yiiGridView('getSelectedRows'); 
@@ -272,7 +283,6 @@ function getTransferticks (){
         //success: alert("The following records were copied: " + value)
         success: $.pjax.reload({container:'#kv-unique-id-1'}) 
     });
-
 }
 
 function getCopyitbybimonthly (){
@@ -348,7 +358,6 @@ function getCopyitbyfrequencysalesorderdetail (){
     });
 }
 
-
 function getCopycostitbytodaysdate (){
     var keys = $('#w0').yiiGridView('getSelectedRows'); 
     $.post({ type: "GET",
@@ -404,7 +413,17 @@ function getPaidallowing (){
         },
         success: $.pjax.reload({container:'#kv-unique-id-7'})   
     });
+}
 
+function getGenerateinvoice (){
+    var keys = $('#w1').yiiGridView('getSelectedRows'); 
+    $.post({ type: "GET",
+             url: '/product/generateinvoice/',
+        dataType: "json",
+        data: {keylist: keys                                    
+        },
+        success: $.pjax.reload({container:'#kv-unique-id-7'})   
+    });
 }
 
 function getProcessticked (){
@@ -422,5 +441,4 @@ function getProcessticked (){
         },
        success: alert("The following file ID was copied: " + keys) 
     });
-
 }

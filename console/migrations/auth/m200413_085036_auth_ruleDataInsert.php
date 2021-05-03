@@ -1,7 +1,6 @@
 <?php
 namespace console\migrations\auth;
 
-use yii\db\Schema;
 use yii\db\Migration;
 
 class m200413_085036_auth_ruleDataInsert extends Migration

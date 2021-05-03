@@ -21,19 +21,21 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'parent' => 'admin',
         'child' => 'Access db',
     ],
-    ///allow the signing up of the first user ie. admin                            
-    ///[
-    ///    'parent' => 'fencemode',
-    ///    'child'=>'User can Login but not Signup - Fence Mode On',    
-    ///],
-    
     [
         'parent' => 'Mdb0',
         'child' => 'Access db',
     ],
     [
-        'parent' => 'Udb0',
+        'parent' => 'Udb',
         'child' => 'Access db',
+    ],
+    [
+        'parent' => 'Mdb1',
+        'child' => 'Access db1',
+    ],
+    [
+        'parent' => 'admin',
+        'child' => 'Access paypalagreement',
     ],
     [
         'parent' => 'admin',
@@ -45,6 +47,14 @@ class m200413_082924_auth_item_childDataInsert extends Migration
     ],
     [
         'parent' => 'admin',
+        'child' => 'Backup Database',
+    ],
+    [
+        'parent' => 'admin',
+        'child' => 'Create Carousal',
+    ],
+    [
+        'parent' => 'manager',
         'child' => 'Create Carousal',
     ],
     [
@@ -60,6 +70,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Create Daily Clean',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Create Daily Clean',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Create Daily Clean',
     ],
@@ -68,6 +82,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Create Daily Job Sheet',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Create Daily Job Sheet',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Create Daily Job Sheet',
     ],
@@ -76,11 +94,31 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Create Employee',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Create Employee',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Create Employee',
     ],
     [
         'parent' => 'admin',
+        'child' => 'Create Gocardlesscustomer',
+    ],
+    [
+        'parent' => 'manager',
+        'child' => 'Create Gocardlesscustomer',
+    ],
+    [
+        'parent' => 'support',
+        'child' => 'Create Gocardlesscustomer',
+    ],
+    [
+        'parent' => 'admin',
+        'child' => 'Create House',
+    ],
+    [
+        'parent' => 'manager',
         'child' => 'Create House',
     ],
     [
@@ -89,6 +127,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
     ],
     [
         'parent' => 'admin',
+        'child' => 'Create Instruction',
+    ],
+    [
+        'parent' => 'manager',
         'child' => 'Create Instruction',
     ],
     [
@@ -100,7 +142,31 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Create Legal',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Create Legal',
+    ],
+    [
+        'parent' => 'support',
+        'child' => 'Create Legal',
+    ],                            
+    [
         'parent' => 'admin',
+        'child' => 'Create Mandate',
+    ],
+    [
+        'parent' => 'manager',
+        'child' => 'Create Mandate',
+    ],
+    [
+        'parent' => 'support',
+        'child' => 'Create Mandate',
+    ],
+    [
+        'parent' => 'admin',
+        'child' => 'Create Messagelog',
+    ],
+    [
+        'parent' => 'manager',
         'child' => 'Create Messagelog',
     ],
     [
@@ -112,6 +178,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Create Messaging',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Create Messaging',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Create Messaging',
     ],
@@ -120,6 +190,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Create Postalcode',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Create Postalcode',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Create Postalcode',
     ],
@@ -128,11 +202,19 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Create Street',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Create Street',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Create Street',
     ],
     [
         'parent' => 'admin',
+        'child' => 'Create Tax',
+    ],
+    [
+        'parent' => 'manager',
         'child' => 'Create Tax',
     ],
     [
@@ -148,6 +230,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Delete Carousal',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Delete Carousal',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Delete Carousal',
     ],
@@ -160,6 +246,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Delete Daily Clean',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Delete Daily Clean',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Delete Daily Clean',
     ],
@@ -168,6 +258,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Delete Daily Job Sheet',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Delete Daily Job Sheet',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Delete Daily Job Sheet',
     ],
@@ -176,6 +270,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Delete Employee',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Delete Employee',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Delete Employee',
     ],
@@ -184,6 +282,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Delete House',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Delete House',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Delete House',
     ],
@@ -192,11 +294,31 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Delete Instruction',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Delete Instruction',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Delete Instruction',
     ],
     [
         'parent' => 'admin',
+        'child' => 'Delete Mandate',
+    ],
+    [
+        'parent' => 'manager',
+        'child' => 'Delete Mandate',
+    ],
+    [
+        'parent' => 'support',
+        'child' => 'Delete Mandate',
+    ],
+    [
+        'parent' => 'admin',
+        'child' => 'Delete Messagelog',
+    ],
+    [
+        'parent' => 'manager',
         'child' => 'Delete Messagelog',
     ],
     [
@@ -208,6 +330,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Delete Messaging',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Delete Messaging',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Delete Messaging',
     ],
@@ -216,6 +342,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Delete Postalcode',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Delete Postalcode',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Delete Postalcode',
     ],
@@ -224,11 +354,19 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Delete Street',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Delete Street',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Delete Street',
     ],
     [
         'parent' => 'admin',
+        'child' => 'Delete Tax',
+    ],
+    [
+        'parent' => 'manager',
         'child' => 'Delete Tax',
     ],
     [
@@ -240,16 +378,60 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'deleteItem',
     ],
     [
-        'parent' => 'Udb0',
-        'child' => 'employee',
+        'parent' => 'admin',
+        'child' => 'Google Translate',
     ],
     [
         'parent' => 'admin',
         'child' => 'Import Houses',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Import Houses',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Import Houses',
+    ],
+    [
+        'parent' => 'admin',
+        'child' => 'Manage Admin',
+    ],
+    [
+        'parent' => 'manager',
+        'child' => 'Manage Admin',
+    ],
+    [
+        'parent' => 'Mdb0',
+        'child' => 'Manage Admin',
+    ],
+    [
+        'parent' => 'Mdb1',
+        'child' => 'Manage Admin',
+    ],
+    [
+        'parent' => 'admin',
+        'child' => 'Manage Basic',
+    ],
+    [
+        'parent' => 'employee',
+        'child' => 'Manage Basic',
+    ],
+    [
+        'parent' => 'manager',
+        'child' => 'Manage Basic',
+    ],
+    [
+        'parent' => 'Mdb1',
+        'child' => 'Manage Basic',
+    ],
+    [
+        'parent' => 'support',
+        'child' => 'Manage Basic',
+    ],
+    [
+        'parent' => 'Udb',
+        'child' => 'Manage Basic',
     ],
     [
         'parent' => 'admin',
@@ -288,7 +470,15 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'support',
     ],
     [
+        'parent' => 'Mdb1',
+        'child' => 'support',
+    ],
+    [
         'parent' => 'admin',
+        'child' => 'Update Carousal',
+    ],
+    [
+        'parent' => 'manager',
         'child' => 'Update Carousal',
     ],
     [
@@ -300,6 +490,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Update Company',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Update Company',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Update Company',
     ],
@@ -308,6 +502,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Update Daily Clean',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Update Daily Clean',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Update Daily Clean',
     ],
@@ -316,6 +514,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Update Daily Job Sheet',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Update Daily Job Sheet',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Update Daily Job Sheet',
     ],
@@ -324,6 +526,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Update Employee',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Update Employee',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Update Employee',
     ],
@@ -332,6 +538,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Update House',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Update House',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Update House',
     ],
@@ -340,11 +550,31 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Update Instruction',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Update Instruction',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Update Instruction',
     ],
     [
         'parent' => 'admin',
+        'child' => 'Update Mandate',
+    ],
+    [
+        'parent' => 'manager',
+        'child' => 'Update Mandate',
+    ],
+    [
+        'parent' => 'support',
+        'child' => 'Update Mandate',
+    ],
+    [
+        'parent' => 'admin',
+        'child' => 'Update Messagelog',
+    ],
+    [
+        'parent' => 'manager',
         'child' => 'Update Messagelog',
     ],
     [
@@ -356,6 +586,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Update Messaging',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Update Messaging',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Update Messaging',
     ],
@@ -364,6 +598,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Update Postalcode',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Update Postalcode',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Update Postalcode',
     ],
@@ -372,11 +610,19 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'Update Street',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'Update Street',
+    ],
+    [
         'parent' => 'support',
         'child' => 'Update Street',
     ],
     [
         'parent' => 'admin',
+        'child' => 'Update Tax',
+    ],
+    [
+        'parent' => 'manager',
         'child' => 'Update Tax',
     ],
     [
@@ -409,14 +655,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
     ],
     [
         'parent' => 'admin',
-        'child' => 'Use Twilio',
+        'child' => 'View Bulletin Board',
     ],
     [
-        'parent' => 'support',
-        'child' => 'Use Twilio',
-    ],                            
-    [
-        'parent' => 'admin',
+        'parent' => 'manager',
         'child' => 'View Bulletin Board',
     ],
     [
@@ -428,6 +670,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'View Carousal',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'View Carousal',
+    ],
+    [
         'parent' => 'support',
         'child' => 'View Carousal',
     ],
@@ -436,6 +682,10 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'View Company',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'View Company',
+    ],
+    [
         'parent' => 'support',
         'child' => 'View Company',
     ],
@@ -444,11 +694,23 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'View Daily Clean',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'View Daily Clean',
+    ],
+    [
         'parent' => 'support',
         'child' => 'View Daily Clean',
     ],
     [
-        'parent' => 'Udb0',
+        'parent' => 'Udb',
+        'child' => 'View Daily Clean',
+    ],
+    [
+        'parent' => 'Udb3',
+        'child' => 'View Daily Clean',
+    ],
+    [
+        'parent' => 'Udb4',
         'child' => 'View Daily Clean',
     ],
     [
@@ -464,30 +726,38 @@ class m200413_082924_auth_item_childDataInsert extends Migration
         'child' => 'View Instruction',
     ],
     [
+        'parent' => 'manager',
+        'child' => 'View Instruction',
+    ],
+    [
         'parent' => 'support',
         'child' => 'View Instruction',
     ],
     [
         'parent' => 'admin',
-        'child' => 'View Revenue Reports',
+        'child' => 'View Mandate',
+    ],
+    [
+        'parent' => 'manager',
+        'child' => 'View Mandate',
     ],
     [
         'parent' => 'support',
-        'child' => 'View Revenue Reports',
+        'child' => 'View Mandate',
     ],
     [
         'parent' => 'admin',
-        'child' => 'fencemode',
+        'child' => 'View Revenue Reports',
+    ],
+    [
+        'parent' => 'manager',
+        'child' => 'View Revenue Reports',
     ],
     [
         'parent' => 'support',
-        'child' => 'fencemode',
+        'child' => 'View Revenue Reports',
     ],
-    [
-        'parent' => 'employee',
-        'child' => 'fencemode',
-    ],                            
-]
+    ]
         );
     }
 
