@@ -48,7 +48,6 @@ class ProductSearch extends Product
         'asc' => ['productsubcategory_id' => SORT_ASC],
         'desc' => ['productsubcategory_id' => SORT_DESC],
         ];
-       
         
         if (!isset($this->isactive)) {$this->isactive = 1;}
         
@@ -72,3 +71,4 @@ class ProductSearch extends Product
         return $dataProvider;
     }
 }
+
