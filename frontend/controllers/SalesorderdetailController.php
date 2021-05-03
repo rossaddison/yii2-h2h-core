@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use Yii;
 use frontend\models\Salesorderheader;
 use frontend\models\Salesorderdetail;
+use frontend\models\SalesinvoiceAmount;
 use frontend\models\Product;
 use frontend\models\Company;
 use frontend\components\Utilities;
@@ -135,7 +136,7 @@ class SalesorderdetailController extends Controller
 	    $this->findModel($id)->delete();            
             return $this->redirect(['index','id'=>$model->sales_order_id]);
 	} catch(IntegrityException $e) {              
-              throw new \yii\web\HttpException(404, Yii::t('app','Integrity Constraint exception.'));
+              throw new \yii\web\HttpException(404, Yii::t('app','Integrity Constraint exception. This clean is connected to an invoice. An invoice cannot be deleted. Reduce the asking price to zero.'));
         }
     }
     
@@ -152,6 +153,12 @@ class SalesorderdetailController extends Controller
                     if ($model !== null) {
                         $model->paid = $model->unit_price;
                         $model->cleaned = "Cleaned";
+                         if (!empty($model->invoice_id)){
+                            $id = $model->invoice_id;
+                            $salesinvoiceamount = SalesinvoiceAmount::findOne($id);
+                            $salesinvoiceamount->invoice_balance = $salesinvoiceamount->invoice_total-$model->paid;
+                            $salesinvoiceamount->save();
+                        }
                         $model->save();
                     }
       }
@@ -173,6 +180,12 @@ class SalesorderdetailController extends Controller
                     $model = $this->findModel($value);
                     if ($model !== null) {
                         $model->paid = 0;
+                        if (!empty($model->invoice_id)){
+                            $invoice_id = $model->invoice_id;
+                            $salesinvoiceamount = SalesinvoiceAmount::find()->where(['=','invoice_id',$invoice_id])->one();
+                            $salesinvoiceamount->invoice_balance = $salesinvoiceamount->invoice_total-$model->paid;
+                            $salesinvoiceamount->save();
+                        }
                         $model->save();
                     }
       }
@@ -183,8 +196,6 @@ class SalesorderdetailController extends Controller
       return;
     }
     
-    
-        
     public function actionPay($id)
     {
         if (!\Yii::$app->user->can('Update Daily Job Sheet')) {
@@ -192,6 +203,18 @@ class SalesorderdetailController extends Controller
         }    
         $model = $this->findModel($id);
         if ($model !== null) {
+           //if an invoice has already been created then prepare to create a payment towards it
+           if (!empty($model->invoice_id)){
+               //enter the amount, date, and method of payment of the invoice
+               Yii::$app->session['salesinvoicepayment_invoiceid'] = $model->invoice_id;
+               Yii::$app->session['salesinvoicepayment_salesorderdetail_id'] = $model->sales_order_detail_id;
+               Yii::$app->session['salesinvoicepayment_unitprice'] = $model->unit_price;
+               //the following create process will create a payment using the session variables above
+               //and assign the resultant payment_id to the sales order detail table
+               //and also mark the sales order detail table as paid.
+               return $this->redirect(['salesinvoicepayment/create']);
+           }
+           //if there is no invoice simply mark the clean as paid. There is no need to go through the invoice system.
            $model->paid = $model->unit_price;
            $model->save();
         }
@@ -205,6 +228,11 @@ class SalesorderdetailController extends Controller
         }    
         $model = $this->findModel($id);
         if ($model !== null) {
+            if (!empty($model->invoice_id)){
+               Yii::$app->session['salesinvoicepayment_invoiceid'] = $model->invoice_id;
+               //the payment_id was recorded in the above pay method so use it now to update the relevant payment.
+               return $this->redirect(['salesinvoicepayment/update','id'=>$model->payment_id]);
+           }
            $model->paid = 0;
            $model->save();
         }
@@ -221,7 +249,14 @@ class SalesorderdetailController extends Controller
       foreach ($keylist as $key => $value)
       {
                     $model = $this->findModel($value);
-                    if ($model !== null) {$model->delete();}
+                    if ($model !== null) {
+                        try{
+                        $model->delete();
+                        } catch(IntegrityException $e) {              
+                            throw new \yii\web\HttpException(404, Yii::t('app','Integrity Constraint exception. This clean is connected to an invoice. An invoice cannot be deleted. Reduce the asking price to zero.'));
+                        }
+                    }
+                    
       } 
       }
       else {throw new NotFoundHttpException(Yii::t('app','No ticks selected.'));}
@@ -343,6 +378,7 @@ class SalesorderdetailController extends Controller
       return;
     }
     
+    //use twilio to text the amount owing to a customer
     public function actionOwingticked()
     {
       if (!\Yii::$app->user->can('Update Daily Job Sheet') && (!\Yii::$app->authManager->getAssignment('support',Yii::$app->user->user_id)==null)){
