@@ -200,6 +200,6 @@ $js = <<< 'SCRIPT'
             }
         });
     });
-    SCRIPT;
+SCRIPT;
     $this->registerJs($js);
 ?>
