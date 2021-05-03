@@ -1,7 +1,9 @@
 <?php
 
 namespace frontend\models;
+use yii\db\Expression;
 use Yii;
+
 
 class Costheader extends \yii\db\ActiveRecord
 {
@@ -68,6 +70,14 @@ class Costheader extends \yii\db\ActiveRecord
         return $this->hasOne(Employee::className(), ['id' => 'employee_id']);
     }
     
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+             $this->modified_date = new Expression('NOW()');    
+            return true;
+        }
+        return false;
+    }
     
     
 }
