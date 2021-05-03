@@ -125,11 +125,29 @@ $provider = new ArrayDataProvider([
                         }
                     }
          ],
-        'unit_price',       
+        'unit_price',
+         [
+            'class'=>'kartik\grid\DataColumn',
+            'attribute'=>'invoice_id',
+            'header'=>'Invoice Number',
+            'value'=>function($provider){
+               if (empty($provider['invoice_id'])){
+                   return "";
+               }
+               else
+               {
+                   return $provider['invoice_id'];
+               };
+            }
+        ],           
     ],
 ]); 
 ?>
 </div>
+
+
+
+
 
 
 
