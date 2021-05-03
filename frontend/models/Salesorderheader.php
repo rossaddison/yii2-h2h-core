@@ -3,7 +3,9 @@ namespace frontend\models;
 
 use yii\helpers\Url;
 use yii\helpers\Html;
+use yii\db\Expression;
 use frontend\models\Employee;
+use frontend\models\Carousal;
 use Yii;
 
 class Salesorderheader extends \yii\db\ActiveRecord
@@ -83,4 +85,12 @@ class Salesorderheader extends \yii\db\ActiveRecord
         return $this->hasOne(Carousal::className(), ['id' => 'carousal_id']);
     }
     
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+             $this->modified_date = new Expression('NOW()');    
+            return true;
+        }
+        return false;
+    }
 }
