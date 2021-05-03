@@ -3,9 +3,12 @@ namespace frontend\controllers;
 
 use Yii;
 use frontend\models\Company;
+use kartik\mpdf\Pdf;
 use frontend\models\Product;
 use frontend\models\Salesorderdetail;
 use frontend\models\Salesorderheader;
+use frontend\modules\invoice\application\models\Salesinvoice;
+use frontend\modules\invoice\application\models\SalesinvoiceAmount;
 use frontend\models\Instruction;
 use frontend\models\Paymentrequest;
 use GoCardlessPro\Core\Exception\InvalidStateException;
@@ -20,13 +23,14 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\db\ActiveRecord;
 use yii\db\Query;
+use yii\db\Expression;
 use yii\behaviors\TimestampBehavior;
 use yii\di\ServiceLocator;
-
+use sjaakp\pluto\models\User;
+use frontend\modules\invoice\application\models\ci\Mdl_settings;
 
 class ProductController extends Controller
 {
-    
     public function behaviors()
     {
         return [
@@ -41,8 +45,7 @@ class ProductController extends Controller
                             [
                             'class' => TimestampBehavior::className(),
                             'attributes' => [
-                                                ActiveRecord::EVENT_BEFORE_INSERT => ['nextclean_date',
-                                                'modified_date'],
+                                                ActiveRecord::EVENT_BEFORE_INSERT => ['modified_date'],
                                                 ActiveRecord::EVENT_BEFORE_UPDATE => ['modified_date'],
                                             ],
                             ],
@@ -92,6 +95,7 @@ class ProductController extends Controller
     
     public function actionIndex()
     {   
+        $online_payers = Yii::$app->authManager->getUserIdsByRole('Online Payer');
         $searchModel = new ProductSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->pagination->pageSize=10;
@@ -128,7 +132,72 @@ class ProductController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'online_payers'=>$online_payers
         ]);
+    }
+    
+    public function actionAssign()
+    {
+      //assign selected houses to user that has 'Make payment online' permission.
+      //onlineuser is the dropdownbox specific user's (w61:product/index) user id
+      $user_id = Yii::$app->request->get('onlineuser');
+      //get the selected houses
+      $keylist = Yii::$app->request->get('keylist');
+      //work through the houses that have been selected to be paid for by the online user
+      foreach ($keylist as $key => $value)
+      {
+                    $product = Product::findOne($value);
+                    $product->user_id = $user_id;
+                    $product->save();
+                    //find all current invoices that are linked to houses since a product represents a house
+                    $houseinvoices = Salesinvoice::find()->where(['=','product_id',$product->id])
+                    //find all invoices that are currently unpaid
+                    //exclude draft 1  and paid 4  invoices
+                    //include sent 2 and viewed 3
+                                        ->andWhere(['in','invoice_status_id',[2,3]])
+                    //invoices that are unpaid are assigned to this user for payment 
+                                        ->all();
+                    foreach ($houseinvoices as $key => $value) {
+                        $salesinvoice  = Salesinvoice::findOne($value);
+                        $salesinvoice->user_id = $user_id;
+                        $salesinvoice->save();
+                    }
+      }      
+      $user = User::findOne($user_id);
+      Yii::$app->session->setFlash('info','Selected Houses have been assigned to: '.$user->name. ' for payment.');
+      return $this->goHome();
+    }
+    
+    public function actionUnassign()
+    {
+      //unassign selected houses to user that has 'Make payment online' permission.
+      //onlineuser is the dropdownbox specific user's (w61:product/index) user id
+      $user_id = Yii::$app->request->get('onlineuser');
+      //get the selected houses
+      $keylist = Yii::$app->request->get('keylist');
+      //work through the houses that have been selected to be paid for by the online user
+      foreach ($keylist as $key => $value)
+      {
+                    $product = Product::findOne($value);
+                    $product->user_id = null;
+                    $product->save();
+                    //find all current invoices that are linked to houses since a product represents a house
+                    $houseinvoices = Salesinvoice::find()->where(['=','product_id',$product->id])
+                    //find all invoices that are currently unpaid
+                    //exclude draft 1  and paid 4  invoices
+                    //include sent 2 and viewed 3
+                                        ->andWhere(['in','invoice_status_id',[2,3]])
+                    //invoices that are unpaid are assigned to this user for payment 
+                                        ->all();
+                    foreach ($houseinvoices as $key => $value) {
+                        $salesinvoice = Salesinvoice::findOne($value);
+                        $salesinvoice->user_id = null;
+                        $salesinvoice->save();
+                    }
+      }      
+      $user = User::findOne($user_id);
+      Yii::$app->session->setFlash('info','Selected Houses have been unassigned to: '.$user->name. ' for payment.');
+      return $this->goHome();
     }
     
     public function actionCondensed()
@@ -343,7 +412,7 @@ class ProductController extends Controller
        }
    } 
    
-   public function actionDoit()
+   public function actionTransfer()
    {
       //sorder is the dropdownbox specific date's (w9:product/index) sales order id
       $dailyclean_id = Yii::$app->request->get('sorder');
@@ -449,7 +518,7 @@ class ProductController extends Controller
          //$model_sessiondetail->session_detail_id;
          $model_sessiondetail->session_id = $sessionid;
          $model_sessiondetail->redirect_flow_id = $redirectFlow->id;  
-         $model_sessiondetail->db =  Utilities::userdb_database_code();
+         $model_sessiondetail->db =  Utilities::userdb();
          $model_sessiondetail->product_id = $model->id;
          $model_sessiondetail->user_id = Yii::$app->user->id;
          $model_sessiondetail->save();
@@ -732,6 +801,94 @@ class ProductController extends Controller
       
     } 
     
+    //////NOT TO BE USED///
+    public function actionGenerateinvoice()
+    {
+      if (!\Yii::$app->user->can('Update Daily Job Sheet')) {
+            throw new \yii\web\ForbiddenHttpException(Yii::t('app','You do not have permission to update a daily jobsheet.'));
+      } 
+      //the keylist can only be used if no invoice id is associated with this sales order detail since it is disabled
+      //see product/index/checkboxcolumn 
+      $keylist = Yii::$app->request->get('keylist');
+      if (empty($keylist)){
+          throw new \yii\web\ForbiddenHttpException(Yii::t('app','At least one must be ticked. '));
+      }   
+      //the salesorderdetail must be associated with this invoice_id
+      //integrity constraints now in place automatically through foreign key constraint 
+      //salesorderdetail table's fk_salesorderdetail_invoice_id's NO DELETE
+      //Therefore once the invoice is created this salesorderdetail will not be able to be deleted 
+      //and the invoice will legally not be able to be deleted as well.
+      //Can only be cancelled by a credit note (future development)
+      
+      //initialize values for the salesinvoiceamount table
+      
+      if (!empty($keylist)){
+        //create an invoice for all these salesorderdetails to go into
+        $invoice = new Salesinvoice();
+        //default is draft = 1
+        $invoice->invoice_status_id = 1;
+        //get the customer aka product id of the customer;
+        //only one salesorderdetail is necessary to identify the customer
+        foreach ($keylist as $key => $value)
+        {
+            $salesorderdetail = Salesorderdetail::findOne($value);
+            $temp = $salesorderdetail->product_id; 
+        }
+        $invoice->product_id = $temp;
+        //include the company's user who generated this invoice under user_id. Admin or Manager with 'update daily clean' permission.
+        $invoice->user_id = Yii::$app->user->id;
+        //change the is_read_only to 1 when the invoice is paid
+        $invoice->is_read_only = 0;
+        $invoice->invoice_date_created = Date('Y-m-d');
+        $invoice->invoice_time_created = new Expression('NOW()');
+        $invoice->invoice_date_modified = Date('Y-m-d');
+        $date = strtotime("+30 day");
+        $addeddate = date("Y-m-d" , $date);
+        
+        $addeddate = date('Y-m-d', strtotime($date. ' + 31 days'));
+        $invoice->invoice_date_due = $addeddate;
+        $invoice->invoice_url_key = \Yii::$app->Security->generateRandomString(32);
+        //1 = cash, 2 = creditcard
+        $mdl_settings = new Mdl_settings();
+        $mdl_settings->load_settings();
+        if (!empty($mdl_settings->get_setting('default_invoice_terms'))){
+           $invoice->invoice_terms = $mdl_settings->get_setting('default_invoice_terms'); 
+        }
+        $invoice->payment_method_id = 1;       
+        $invoice->save();
+        $invoice_id = $invoice->invoice_id;
+        $invoice_paid = 0;
+        $invoice_total = 0;
+        $invoice_balance = 0;
+          
+        foreach ($keylist as $key => $value)
+        {
+                      $salesorderdetail = Salesorderdetail::findOne($value);
+                      //establish permanent invoice id with this sales_order_detail.
+                      if ($salesorderdetail->invoice_id === null) {
+                          $salesorderdetail->invoice_id = $invoice_id;
+                          $salesorderdetail->save();
+                      }
+                      $invoice_total += $salesorderdetail->unit_price;
+                      $invoice_paid += $salesorderdetail->paid;                      
+        }
+        $invoice_balance = $invoice_total - $invoice_paid;
+        $invoiceamount = new SalesinvoiceAmount();
+        $invoiceamount->invoice_id = $invoice_id;
+        //positive or negative invoice sign ie below or above zero
+        $invoiceamount->invoice_sign = '1';
+        $invoiceamount->invoice_total = $invoice_total;
+        $invoiceamount->invoice_paid = $invoice_paid;
+        $invoiceamount->invoice_balance = $invoice_balance;
+        $invoiceamount->save();
+      }
+      else {throw new NotFoundHttpException(Yii::t('app','No ticks selected.'));}
+      
+      
+      Yii::$app->session->setFlash('kv-detail-success','Invoice '.$invoice_id. " created." );
+      return $this->goHome();
+    } 
+    
     public function actionAcknowledge_mandates()
     {
         $message = '';
@@ -793,7 +950,43 @@ class ProductController extends Controller
         }
         return Json::encode(['output'=>'', 'selected'=>'']);
    }
+     
+   public function actionMpdf($id){
+    // get your HTML raw content without any layouts or scripts
+     $model= $this->findModel($id);
+        $content = $this->renderpartial('view2',['model'=>$model]);
     
+    // setup kartik\mpdf\Pdf component
+     $pdf = new Pdf([
+        // set to use core fonts only
+        'mode' => Pdf::MODE_CORE, 
+        // A4 paper format
+        'format' => Pdf::FORMAT_A4, 
+        // portrait orientation
+        'orientation' => Pdf::ORIENT_PORTRAIT, 
+        // stream to browser inline
+        'destination' => Pdf::DEST_BROWSER, 
+        // your html content input
+        'content' => $content,  
+        // format content from your own css file if needed or use the
+        // enhanced bootstrap css built by Krajee for mPDF formatting 
+        'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
+        // any css to be embedded if required
+        'cssInline' => '.kv-heading-1{font-size:18px}', 
+         // set mPDF properties on the fly
+        'options' => ['title' => 'Krajee Report Title'],
+         // call mPDF methods on the fly
+        'methods' => [ 
+            'SetHeader'=>['Krajee Report Header'], 
+            'SetFooter'=>['{PAGENO}'],
+        ]
+    ]);
+    
+    // return the pdf output as per the destination setting
+    return $pdf->render(); 
+   }
+   
+     
    public static function getCustomerList($cat_id, $subcat_id) {
         //find all the houses in the street
         $data = [];
@@ -808,7 +1001,9 @@ class ProductController extends Controller
    {
         Yii::$app->session['sliderfontproduct'] = Yii::$app->request->get('sliderfontproduct');    
    }
-    
+   
+   
+      
     protected function findModel($id)
     {
         if (($model = Product::findOne($id)) !== null) {
