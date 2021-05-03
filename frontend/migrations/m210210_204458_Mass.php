@@ -21,7 +21,7 @@ class m210210_204458_Mass extends Migration
             'invoice_date_modified'=> $this->datetime()->notNull()->defaultExpression("CURRENT_TIMESTAMP"),
             'invoice_date_due'=> $this->date()->notNull(),
             'invoice_url_key'=> $this->string(255)->notNull(),
-            'invoice_terms'=>$this->longtext()->notNull(),
+            'invoice_terms'=>$this->string(1000)->notNull(),
             'payment_method_id'=> $this->integer(11)->notNull()->defaultValue(0),
         ], $tableOptions);
 
