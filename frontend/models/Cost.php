@@ -1,6 +1,8 @@
 <?php
 
 namespace frontend\models;
+use yii\db\Expression;
+
 
 use Yii;
 
@@ -72,10 +74,12 @@ class Cost extends \yii\db\ActiveRecord
         return $this->hasMany(Costdetail::className(), ['cost_id' => 'id']);
     }
     
-    
-    
-    
-    
-    
-    
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+             $this->modifieddate = new Expression('NOW()');    
+            return true;
+        }
+        return false;
+    }
 }
