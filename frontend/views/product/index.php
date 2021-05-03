@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use \kartik\grid\GridView;
-use common\widgets\Alert;
+use frontend\widgets\Alert;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
 use frontend\models\Company;
@@ -11,6 +11,8 @@ use frontend\models\Productsubcategory;
 use frontend\models\Salesorderheader;
 use kartik\icons\Icon;
 use kartik\icons\FontAwesomeAsset;
+use kartik\slider\Slider;
+use sjaakp\pluto\models\User;
 use Yii;
 FontAwesomeAsset::register($this);
 $trueLabel=GridView::ICON_ACTIVE_BS4;
@@ -19,6 +21,8 @@ $this->title = Yii::t('app','Houses');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Houses'), 'url' => ['product/index']];
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app','Goto the Daily Cleans Page'), 'url' => ['salesorderheader/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Goto Sales Invoices'), 'url' => ['/invoice/salesinvoice/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Signup Online Payer'), 'url' => ['/libra/signup']];
 if (Company::find()->count() == 0) {$comptel = Yii::t('app','Company Name and Mobile Number');} else {$comptel = Company::findOne(1)->name . " - " . Company::findOne(1)->telephone;};
 $pdfHeader = [
   'L' => [
@@ -80,27 +84,44 @@ $tooltipgocardlesscustomer = Html::tag('span', 'Gocardless'. Yii::t('app','Manda
 <h1><?= Html::encode($this->title) ?></h1>
 <?= 
    //Modal link frontend/layouts/main.php and frontend/assets/AppAsset.php
-   //Html::button(Yii::t('app','Create House'), ['value' => Url::to(['product/create']), 'title' => Yii::t('app','Creating New House'), 'class' => 'showModalButton btn btn-success btn-lg','title'=>Yii::t('app','Have you setup your Postcode and street?'),'data-toggle'=>'tooltip']); 
+   //Html::button(Yii::t('app','Create House'), ['value' => Url::toRoute(['/house/create']), 'title' => Yii::t('app','Creating New House'), 'class' => 'showModalButton btn btn-success btn-lg','title'=>Yii::t('app','Have you setup your Postcode and street?'),'data-toggle'=>'tooltip']); 
    Html::a(Yii::t('app','Create House'), Url::to(['/product/create']), ['class' => 'btn btn-success btn-lg','title'=>Yii::t('app','Have you setup your Postcode and street?'),'data-toggle'=>'tooltip']); 
- ?>
+?>
 <?php 
    //Html::a(Yii::t('app','Create House'), ['create'], ['class' => 'btn btn-success btn-lg','title'=>Yii::t('app','Have you setup your Postcode and street?'),'data-toggle'=>'tooltip']) 
-?>
-   <Hr style = "border-top: 3px double #8c8b8b">   
+?> 
+   <Hr style = "border-top: 3px double #8c8b8b">
+   <?php if (Yii::$app->user->can('Manage Admin')) { ?>
+   <button id="w813" class = "btn btn-success btn-lg" onclick="js:getAssigntopayer()" title="<?php Yii::t('app','Select the houses that your signed up user with Make a Payment Online permission will be paying for.') ?>" data-toggle="tooltip"><?php echo Yii::t('app','Assign Ticked to: ') ?></button>
+   <?= Html::label(Yii::t('app','User: ')) ?>
+   <?= Html::dropDownList('onlineuser','', ArrayHelper::map(User::find()->orderBy(['id'=>SORT_DESC])->where(['in','id',$online_payers])->all(),'id','name'),['prompt' => '--- select ---','id'=>'w61']) ?>
+   <?= Html::label(Yii::t('app','who will make online payments for the Householder')) ?>
+   <Hr style = "border-top: 3px double #8c8b8b">
+   <?php } ?>   
    <button id="w5" class = "btn btn-success btn-lg" onclick="js:getKeys()" title="<?php Yii::t('app','Have you created your Daily Clean?') ?>" data-toggle="tooltip"><?php echo Yii::t('app','Copy Ticked to: ') ?></button>
    <?= Html::label(Yii::t('app','Daily Cleans Date: ')) ?>
    <?= Html::dropDownList('sorder','', ArrayHelper::map(Salesorderheader::find()->orderBy(['clean_date'=>SORT_DESC])->all(),'sales_order_id','status','clean_date'),['prompt' => '--- select ---','id'=>'w9']) ?>
    <Hr style = "border-top: 3px double #8c8b8b">
    <?= Html::a(Yii::t('app','Back'), Url::previous(), ['class' => 'btn btn-success btn-lg']) ?>    
-        <Hr style = "border-top: 3px double #8c8b8b">
-     
+   <Hr style = "border-top: 3px double #8c8b8b">
+   <?php if (Yii::$app->user->can('Create Gocardlesscustomer')) { ?>
+   <button id="w65" class = "btn btn-info  btn-lg" onclick="js:getCreategocardlesscustomer()" title="<?php Yii::t('app','Clicking here will send an email to this customer, that you have ticked, with a link to the direct debit mandate created by the Gocardless API. The customer must approve this mandate within 30 minutes otherwise you will have to resend. The email will have a link to the '). 'Gocardless'. Yii::t('app',' website. Once the customer has entered their bank details on the '). 'Gocardless'. Yii::t('app',' website they will be redirected to this website to a Thank you for approval message. You will then have to acknowledge this mandate by pressing the button above House on the main menu.  Only then will you be able to send Payment Requests via email with the adjacent button: An email will be sent to the customer with a breakdown of the payment. This email will be followed up with an email from' ). 'Gocardless' ?>" data-toggle="tooltip"><?php echo Yii::t('app','Email Direct Debit Mandate Link to Customer for their approval. (tick)') ?></button>
+   <Hr style = "border-top: 3px double #8c8b8b"> 
+   <button id="w665" class = "btn btn-info  btn-lg" onclick="js:getRequestgocardlesspayment()" title="<?php Yii::t('app','Clicking here will send an email to this customer, that you have ticked, informing them that you are requesting payment. Payment amounts must not be less than &pound 1.') ?>" data-toggle="tooltip"><?php echo Yii::t('app','Email Payment Request to Customer. (tick)') ?></button>
+   <Hr style = "border-top: 3px double #8c8b8b">     
+   <?php } ?>
+   <?php if (!Yii::$app->user->can('Create Gocardlesscustomer')) { ?>
+   <button id="w65" class = "btn btn-info" onclick="js:getCreategocardlesscustomer()" disabled = "disabled" title="Enable in Other ... Company Settings. Signup with Gocardless  under your company name and get an Access token from Gocardless. Enter this access token under Other...Company...Gocardless Access Token. Change Sandbox to Live under Company settings. Once setup, clicking on this button will send an email to this customer, that you have ticked, with a link to the direct debit mandate created by the Gocardless API. The email will have a link to the Gocardless website. Once the customer has entered their bank details on the Gocardless website a confirmation of approval email will be sent by Gocardless to Company...email. Only then will you be able to issue a payment request by pressing the adjacent button. Your payment request total must exceed 100. Also make sure you have setup the Customer Email Address by clicking on the view button below." data-toggle="tooltip"><?php echo Yii::t('app','Email Direct Debit Mandate Link to Customer for their approval. (tick)') ?></button>
+   <Hr style = "border-top: 3px double #8c8b8b"> 
+   <button id="w665" class = "btn btn-info  btn-lg" onclick="js:getRequestgocardlesspayment()" disabled = "disabled" title="Clicking here will send an email to this customer, that you have ticked, informing them that you are requesting payment. Payment amounts must not be less than &pound 1." data-toggle="tooltip"><?php echo Yii::t('app','Email Payment Request to Customer. (tick)') ?></button>
+   <Hr style = "border-top: 3px double #8c8b8b">     
+   <?php } ?>   
        <div class="info">
-        <?=          
-           Alert::widget()
+        <?php          
+           echo Alert::widget()
         ?>
        </div>
 <?php 
-use kartik\slider\Slider;
 echo Html::label('Font Size Adjuster:<br>');
 echo Slider::widget([
     'name' => 'sliderfontproduct',
@@ -141,21 +162,21 @@ echo Slider::widget([
      'template'=> '{view}',
     ],
     [
-     'class' => 'kartik\grid\BooleanColumn',
-     'attribute'=>'isactive',
-     'value' => function ($dataProvider) {
-                    return $dataProvider->isactive; 
-            },
-     'filter'=>Html::activeCheckbox($searchModel,'isactive',ArrayHelper::map(Product::find()->indexBy('isactive')->asArray()->all(),'isactive','isactive'),[ 'options' => ['style'=> 'font-size:'.Yii::$app->session['sliderfontproduct'].'px']]),
-     'filterType'=>GridView::FILTER_CHECKBOX,
-     'filterInputOptions' => [
-                  'options' => ['style'=> 'font-size:'.Yii::$app->session['sliderfontproduct'].'px'],
-                  'label'=>'',
-     ],
-     'filterWidgetOptions'=>[
-                  'options' => ['style'=> 'font-size:'.Yii::$app->session['sliderfontproduct'].'px'],
-                  'type'=>\kartik\switchinput\SwitchInput::CHECKBOX
-     ],               
+        'class' => 'kartik\grid\BooleanColumn',
+        'attribute'=>'isactive',
+        'value' => function ($dataProvider) {
+                       return $dataProvider->isactive; 
+               },
+        'filter'=>Html::activeCheckbox($searchModel,'isactive',ArrayHelper::map(Product::find()->indexBy('isactive')->asArray()->all(),'isactive','isactive'),[ 'options' => ['style'=> 'font-size:'.Yii::$app->session['sliderfontproduct'].'px']]),
+        'filterType'=>GridView::FILTER_CHECKBOX,
+        'filterInputOptions' => [
+                     'options' => ['style'=> 'font-size:'.Yii::$app->session['sliderfontproduct'].'px'],
+                     'label'=>'',
+        ],
+        'filterWidgetOptions'=>[
+                     'options' => ['style'=> 'font-size:'.Yii::$app->session['sliderfontproduct'].'px'],
+                     'type'=>\kartik\switchinput\SwitchInput::CHECKBOX
+        ],               
     ],        
     ['class' => '\kartik\grid\EditableColumn',
                 'attribute' =>'productnumber',
@@ -182,7 +203,8 @@ echo Slider::widget([
                    return "<span class = 'badge badge-pill badge-success '> $dataProvider->productnumber </span>";
                 }
     ], 
-    ['class' => '\kartik\grid\EditableColumn',
+    [
+        'class' => '\kartik\grid\EditableColumn',
                 'attribute' =>'contactmobile',
                 'filterInputOptions' => [
                   'class'=> 'form-control',
@@ -202,8 +224,8 @@ echo Slider::widget([
                     'options' => [
                         'pluginOptions' => ['autoclose' => true],                        
                      ]
-                ],                    
-     ],     
+        ],                    
+    ],     
     [
             'class' => 'kartik\grid\ActionColumn',
             'template' => '{link}',// can be omitted, as it is the default
@@ -403,28 +425,38 @@ echo Slider::widget([
     'expandOneOnly' => true,
     ],
     [
-    'class' => 'kartik\grid\DataColumn', 
-    'format'=>'raw',
-    'headerOptions' => ['class' => 'kv-sticky-column'],
-    'contentOptions' => ['class' => 'kv-sticky-column'],
-    'hAlign'=>'right',    
+    'class' => 'kartik\grid\ExpandRowColumn',
+    'header'=>'Invoice',
+    'expandTitle'=> 'Invoice',
+    //https://fontawesome.com/icons?s=solid     
+    'expandIcon' => Icon::show('file-invoice', ['framework' => Icon::FAS]),
     'value' => function ($dataProvider, $key, $index, $column) {
+         return GridView::ROW_COLLAPSED;
+    },
+    'disabled'=> function ($dataProvider, $key, $index, $column) {
                     $rows  = $dataProvider->salesorderdetails;
                     $subtotal = 0.00;
+                    //only display generated invoices if any amount is still owing on any of the invoices owed
+                    //fully paid invoices will not enable the icon but will be retrievable through salesinvoice controller index
                     foreach ($rows as $key => $value)
                              {
-                               if ($rows[$key]['paid'] < $rows[$key]['unit_price'])
+                               if (($rows[$key]['paid'] < $rows[$key]['unit_price']) && (!empty($rows[$key]['invoice_id'])) )
                                {
                                    $subtotal += $rows[$key]['unit_price']; 
-                                   //customers do not always pay full amount $subtotal -= $rows[$key]['paid'];
+                                   //$subtotal -= $rows[$key]['paid']; 
                                }
                              }
                     $subtotal = Yii::$app->formatter->asDecimal($subtotal, 2); 
-                    if ($subtotal > 0.00){return $subtotal;}
-                    else {return '';}
-     }
-     ],
-     [
+                    if ($subtotal > 0.00) { return false;} else { return true;}
+    },
+    'detail' => function ($dataProvider, $key, $index, $column) {
+        return Yii::$app->controller->renderPartial('_expandableviewinvoice', ['model' => $dataProvider]);
+    },
+    'headerOptions' => ['class' => 'kv-sticky-column'],
+    'contentOptions' => ['class' => 'kv-sticky-column'],
+    'expandOneOnly' => true,
+    ],
+    [
             'class'=>'kartik\grid\DataColumn',
             'visible'=>false,
             'header'=>$tooltipgocardlesscustomer,
@@ -433,7 +465,7 @@ echo Slider::widget([
                   else  {return $dataProvider->gc_number;} 
             },
             'filter'=> Html::activeDropDownList($searchModel,'gc_number',ArrayHelper::map(Product::find()->orderBy('gc_number')->asArray()->all(),'gc_number','gc_number'),['options' => ['style'=> 'font-size:'.Yii::$app->session['sliderfontproduct'].'px'],'class'=>'form-control','prompt'=>'Gocardless Number...']), 
-     ],
+    ],
 ];
 
 if ((empty(Yii::$app->session['sliderfontproduct'])) && (!isset(Yii::$app->session['sliderfontproduct']))){Yii::$app->session['sliderfontproduct'] = 18;}
@@ -457,7 +489,7 @@ echo kartik\grid\GridView::widget([
     'responsive' => true,
     'hover' => true,
     'floatHeader' => false,
-    'showPageSummary' => true,
+    'showPageSummary' => false,
     'panel' => [
     'type' => GridView::TYPE_PRIMARY,
     'heading'=> $comptel,
