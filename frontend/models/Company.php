@@ -10,10 +10,10 @@ class Company extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-     public static function getDb()
-   {
+    public static function getDb()
+    {
        return \frontend\components\Utilities::userdb();
-   }  
+    }  
     
        
     public static function tableName()
