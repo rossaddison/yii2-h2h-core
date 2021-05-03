@@ -6,6 +6,11 @@ use frontend\models\Salesorderheader;
 use frontend\models\Productcategory;
 use frontend\models\Productsubcategory;
 use frontend\models\Product;
+use frontend\models\Instruction;
+use frontend\models\Result;
+use frontend\models\Paymentrequest;
+use frontend\models\Salesinvoice;
+use frontend\models\SalesinvoiceAmount;
 use Yii;
 
 class Salesorderdetail extends \yii\db\ActiveRecord
@@ -49,6 +54,8 @@ class Salesorderdetail extends \yii\db\ActiveRecord
             'productcategory_id' => Yii::t('app','Postal Code'),
             'productsubcategory_id'=>Yii::t('app','Street'),
             'product_id'=>Yii::t('app','House'),
+            'invoice_id'=>Yii::t('app','Invoice Id'),
+            'payment_id'=>Yii::t('app','Payment Id'),
             'product_id.homeowner' => Yii::t('app','Homeowner'),
             'product_id.productnumber'=>Yii::t('app','House Number'),
             'order_qty'=>Yii::t('app','Order Qty'),
@@ -73,7 +80,7 @@ class Salesorderdetail extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Productsubcategory::className(), ['id' => 'productsubcategory_id']);
     }
-    
+        
     public function getSalesOrder()
     {
         return $this->hasOne(Salesorderheader::className(), ['sales_order_id' => 'sales_order_id']);
@@ -94,6 +101,19 @@ class Salesorderdetail extends \yii\db\ActiveRecord
         return $this->hasMany(Paymentrequest::className(), ['id' => 'paymentrequest_id']);
     }
     
+    public function getSalesinvoice()
+    {
+        return $this->hasOne(Salesinvoice::className(), ['invoice_id' => 'invoice_id']);
+    }
     
+    public function getSalesinvoiceAmount()
+    {
+        return $this->hasOne(SalesinvoiceAmount::className(),['invoice_id'=>'invoice_id']);
+    }
+    
+    public function getSalesinvoicePayment()
+    {
+        return $this->hasOne(SalesinvoicePayment::className(),['payment_id'=>'payment_id']);
+    }
     
 }
