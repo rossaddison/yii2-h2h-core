@@ -14,8 +14,7 @@ class Product extends \yii\db\ActiveRecord
    public static function getDb()
    {
        return \frontend\components\Utilities::userdb();
-   }  
-    
+   }      
     
    public static function tableName()
    {
