@@ -1,6 +1,7 @@
 <?php
 
 namespace frontend\models;
+use yii\db\Expression;
 
 use Yii;
 
@@ -38,5 +39,14 @@ class Instruction extends \yii\db\ActiveRecord
             'include' => Yii::t('app','Include in Sales Order Detail Drop Down List'),
             'modified_date' => Yii::t('app','Modified Date'),
         ];
+    }
+    
+   public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+             $this->modified_date = new Expression('NOW()');    
+            return true;
+        }
+        return false;
     }
 }
