@@ -2,6 +2,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use frontend\models\Instruction;
+use yii\helpers\ArrayHelper;
 use Yii;
 ?>
 <div class="salesorderdetail-form">
@@ -14,8 +15,8 @@ use Yii;
     <?= $form->field($model, 'product_id')->hiddenInput()->label(false) ?>
     <?= $form->field($model, 'unit_price')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'advance_payment')->textInput(['maxlength' => true]) ?>
-    <?= $form->field($model, 'paid')->textInput() ?>
-    <?= $form->field($model, 'instruction_id')->dropDownList(Arrayhelper::map(Instruction::find()->orderBy('id')->asArray()->all(),'id','code'), ['prompt' => '']) ?>
+    <?= $form->field($model, 'paid')->dropDownList([0 =>0,$model->unit_price => $model->unit_price],['prompt'=>'Select...']) ?>
+    <?= $form->field($model, 'instruction_id')->dropDownList(ArrayHelper::map(Instruction::find()->orderBy('id')->asArray()->all(),'id','code'), ['prompt' => '']) ?>
     <?= $form->field($model, 'tip')->textInput() ?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
