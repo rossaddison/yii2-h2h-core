@@ -258,8 +258,8 @@ class SalesinvoiceController extends Controller
         //retrieve the invoice template that has been set under settings for views/invoice_templates/pdf
         $content = $this->renderpartial(Utilities::getTemplateholderRelativeUrl() . $invoice_template['setting'],['model' => $model]);
         //$content = $this->renderpartial('viewinvoice',['model'=>$model]);
-        if (!empty($this->mdl_settings->get_setting['pdf_invoice_footer'])) {
-          $footer = '<div id="footer">' . $this->mdl_settings->get_setting['pdf_invoice_footer'] . '</div>';
+        if (!empty($this->mdl_settings->get_setting('pdf_invoice_footer'))) {
+          $footer = '<div id="footer">' . $this->mdl_settings->get_setting('pdf_invoice_footer') . '</div>';
         }
         //$content = '<p>'. Html::encode(Utilities::getTemplateholderRelativeUrl() . $invoice_template['setting']) . '</p>';
         $pdf = new Pdf([
