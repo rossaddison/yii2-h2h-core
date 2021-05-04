@@ -15,12 +15,8 @@ $tooltipsortorder = Html::tag('span', 'Order', ['title'=>Yii::t('app','This is t
 <div class="productsubcategory-index">
     <h1><?= Html::encode($this->title) ?></h1>
     <p>
-        <?= 
-            //Modal link frontend/layouts/main.php and frontend/assets/AppAsset.php
-            Html::button(Yii::t('app','Create Street'), ['value' => Url::to(['productsubcategory/create']), 'title' => Yii::t('app','Creating New Postcode'), 'class' => 'showModalButton btn btn-success btn-lg']); 
-        ?>
         <?php
-           //Html::a(Yii::t('app','Create Street'), ['create'], ['class' => 'btn btn-success btn-lg']) 
+           echo Html::a(Yii::t('app','Create Street'), ['create'], ['class' => 'btn btn-success btn-lg']) 
         ?>
         <?= Html::a(Yii::t('app','Postcode Finder'), "http://pcf.raggedred.net/", ['class' => 'btn btn-success btn-lg']) ?>
     </p>

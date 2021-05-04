@@ -26,7 +26,7 @@ Class ProductcategoryController extends Controller
                             'rules' => [
                             [
                               'allow' => true,
-                              'roles' => ['@'],
+                              'roles' => ['Admin','Manage Admin'],
                             ],
                             ],
             ], 

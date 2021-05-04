@@ -49,6 +49,7 @@ class Salesinvoice extends \yii\db\ActiveRecord
             [['invoice_date_created', 'invoice_time_created', 'invoice_date_modified', 'invoice_date_due'], 'safe'],
             [['invoice_url_key'], 'string', 'max' => 255],
             [['reference'], 'string', 'max' => 8],
+            [['reference'],'default','value'=>'#'],
             [['product_id'], 'exist', 'targetClass' => Product::className(), 'targetAttribute' => 'id','filter'=>function (Query $query) {
                 $query->andWhere(['id' => $this->product_id]);} ],
             ['payment_method_id', 'exist', 'targetClass' => SalesinvoiceMethodpay::className(), 'targetAttribute' => 'payment_method_id', 'filter' => function (Query $query) {

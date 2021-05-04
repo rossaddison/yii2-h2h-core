@@ -52,17 +52,17 @@ class ProductController extends Controller
                 'access' => 
                             [
                               'class' => \yii\filters\AccessControl::className(),
-                              'only' => ['index','create','view','update','delete','creategocardlesscustomer','doit','spreadsheet','subcat','getSubcatlist'],
+                              //'only' => ['index','create','view','update','delete','creategocardlesscustomer','transfer','spreadsheet','subcat','getSubcatlist'],
                               'rules' => [
-                            [
-                                'allow' => true,
-                                'verbs' => ['POST']
-                            ],
-                            [
-                                  'allow' => true,
-                                  'roles' => ['@'],
-                            ],
-                            ],
+                                            [
+                                                'allow' => true,
+                                                'verbs' => ['POST']
+                                            ],
+                                            [
+                                                  'allow' => true,
+                                                  'roles' => ['Admin','Manage Admin'],
+                                            ],
+                                          ],
                             ],            
         ];
          
