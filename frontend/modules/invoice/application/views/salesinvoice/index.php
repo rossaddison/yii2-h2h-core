@@ -196,21 +196,18 @@ $tooltipstatus = Html::tag('span', Yii::t('app','Status'), ['title'=>Yii::t('app
                 'class'=>'kartik\grid\DataColumn',
                 'vAlign' => 'middle',                   
                 'attribute'=>'invoice_time_created',
-            ], 
+            ],
             [
                 'class' => 'kartik\grid\EditableColumn',
-                'header' => Yii::t('app','Date'),
-                'attribute' =>  'invoice_date_created',                
-                'filterType'=>GridView::FILTER_SELECT2,
-                'filterInputOptions' => [
-                  'class'=> 'form-control',                  
-                  'placeholder' => Yii::t('app','Date...'),
-                ],
-                'filter'=> Html::activeDropDownList($searchModel,'invoice_date_created',ArrayHelper::map(Salesinvoice::find()->orderBy('invoice_date_created')->asArray()->all(),'invoice_date_created','invoice_date_created')),      
+                'header' => Yii::t('app','Created'),
+                'attribute' =>  'invoice_date_created',
+                'filter'=> Html::activeDropDownList($searchModel,'invoice_date_created',ArrayHelper::map(Salesinvoice::find()->orderBy('invoice_date_created')->asArray()->all(),'invoice_date_created','invoice_date_created'),['class'=>'form-control','prompt'=>'Date...']),      
                 'hAlign' => 'right',
                 'vAlign' => 'middle',
                 'format' => ['date', 'php:Y-m-d'],
                 'refreshGrid'=>true,
+                'headerOptions' => ['class' => 'kv-sticky-column'],
+                'contentOptions' => ['class' => 'kv-sticky-column'],
                 'readonly' => function($dataProvider) {if ($dataProvider->is_read_only) return true; else return false;},
                 'editableOptions' => [
                     'asPopover' => false,
@@ -228,7 +225,7 @@ $tooltipstatus = Html::tag('span', Yii::t('app','Status'), ['title'=>Yii::t('app
                         ]
                     ]
                 ],
-            ], 
+            ],
             [ 
                 'class'=>'kartik\grid\DataColumn',
                 'vAlign' => 'middle',                   
