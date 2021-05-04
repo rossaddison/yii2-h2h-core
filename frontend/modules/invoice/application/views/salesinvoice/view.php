@@ -8,8 +8,13 @@ use kartik\widgets\Alert;
 /* @var $model frontend\models\Salesinvoice */
 
 $this->title = $model->invoice_id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Salesinvoices'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Customer Debt'), 'url' => Yii::getAlias('@web').'/product/index'];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Daily Cleans'), 'url' => Yii::getAlias('@web').'/salesorderheader/index'];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Sales Invoice'), 'url' => ['salesinvoice/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Sales Invoice Payment'), 'url' => ['salesinvoicepayment/index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app','Sales Invoice Settings'), 'url' => ['ip/settings']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Sales Invoices'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = Html::encode($this->title);
 ?>
 <div class="salesinvoice-view">
 

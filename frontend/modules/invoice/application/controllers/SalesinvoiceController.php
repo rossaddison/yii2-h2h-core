@@ -255,7 +255,7 @@ class SalesinvoiceController extends Controller
             $archive = false;
             $settingmessage = Yii::t('app','Pdf setting: Mark invoices as sent upon pdf generated is currently Disabled.'.Html::a('Enable here',Url::to(['@web/invoice/ip/settings'])));
         }    
-        //retrieve the invoice template that has been set under settings
+        //retrieve the invoice template that has been set under settings for views/invoice_templates/pdf
         $content = $this->renderpartial(Utilities::getTemplateholderRelativeUrl() . $invoice_template['setting'],['model' => $model]);
         //$content = $this->renderpartial('viewinvoice',['model'=>$model]);
         if (!empty($this->mdl_settings->get_setting['pdf_invoice_footer'])) {

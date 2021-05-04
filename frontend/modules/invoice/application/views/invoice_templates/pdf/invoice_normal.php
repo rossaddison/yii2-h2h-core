@@ -182,9 +182,6 @@ use frontend\modules\invoice\application\components\Utilities;
         </div>
     <?php endif; ?>
 </h6>
-<p>
-    <?php echo $pdf_invoice_footer; ?>
-</p>
 </div>
 
 

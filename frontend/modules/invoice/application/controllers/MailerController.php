@@ -36,7 +36,7 @@ class MailerController extends Controller
     
     private $is_overdue = false;
     
-    private $mdl_settings;
+    public $mdl_settings;
     
     private $mdl_uploads;
     
@@ -397,7 +397,7 @@ class MailerController extends Controller
         $html = $this->renderpartial(Utilities::getTemplateholderRelativeUrl() . $pdf_template,['model' => $salesinvoice]);
         $filename = Utilities::trans('invoice') . '_' . str_replace(['\\', '/'], '_', $invoice_id);
         //files will not be streamed to the browser but will be saved to the online folder
-        $archived_filename = MpdfHelper::pdf_create($html, $filename, $stream = false);
+        $archived_filename = MpdfHelper::pdf_create($html, $filename, $stream = false,$salesinvoice);
         Yii::$app->session->setFlash(Yii::t('app','The following file has been archived: '.$archived_filename));
     }
     

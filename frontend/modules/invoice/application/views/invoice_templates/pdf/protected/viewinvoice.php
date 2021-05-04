@@ -7,6 +7,7 @@ use frontend\modules\invoice\application\helpers\InvoiceHelper;
 use frontend\modules\invoice\application\models\ci\Mdl_settings;
 use frontend\modules\invoice\application\components\Utilities;
 ?>
+<div>
 <img src="<?= Yii::$app->request->baseUrl ?>
           <?= Utilities::getPlaceholderRelativeUrl() ?>
           <?= InvoiceHelper::invoice_logo();?>" height="60" width="60">
@@ -175,8 +176,4 @@ use frontend\modules\invoice\application\components\Utilities;
         </div>
     <?php endif; ?>
 </h6>
-<p>
-    <?php echo $pdf_invoice_footer; ?>
-</p>
-
-
+</div>

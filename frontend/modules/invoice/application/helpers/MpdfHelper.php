@@ -3,13 +3,14 @@ Namespace frontend\modules\invoice\application\helpers;
 
 use frontend\modules\invoice\application\models\ci\Mdl_settings;
 use frontend\modules\invoice\application\components\Utilities;
+use frontend\modules\invoice\application\helpers\TemplateHelper;
 use yii\helpers\FileHelper;
 use yii\base\Component;
 use Yii;
 
 Class MpdfHelper extends Component
 {
-        public static function pdf_create($html,$filename,$stream = true) 
+        public static function pdf_create($html,$filename,$stream = true,$model) 
         {
             $mdl_settings = new Mdl_settings();
             $mdl_settings->load_settings();
@@ -44,15 +45,18 @@ Class MpdfHelper extends Component
                 $mpdf->setAutoBottomMargin = 'stretch';
                 $mpdf->SetHTMLFooter('<div id="footer">' . $mdl_settings->get_setting('pdf_invoice_footer') . '</div>');
             }
-
+            
+            //determine if the invoice is overdue / paid and return the appropriate watermark in the form of an array
+            $invoice_template = TemplateHelper::select_pdf_invoice_template($model);
             // Watermark
-            if ($mdl_settings->get_setting('pdf_watermark')) {
-                $mpdf->showWatermarkText = true;
+            if ($mdl_settings->get_setting('pdf_watermark')) {                
+                $mpdf->SetWatermarkImage($invoice_template['watermark']);
+                $mpdf->showWatermarkImage = true;
             }
             
             $cssFile = Yii::getAlias('@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css');
             $css = file_get_contents($cssFile);
-            $mpdf->writeHtml($css,1);
+            $mpdf->WriteHTML($css,1);
             $mpdf->WriteHTML((string) $html,2);
 
             foreach (glob(Yii::getAlias('@webroot').Utilities::getUploadsArchiveholderRelativeUrl() . '*' . $filename . '.pdf') as $file) {
