@@ -75,8 +75,8 @@ if ($mdl_settings->get_setting('monospace_amounts') == 1) {
                     <label for="from_name"><?=  Utilities::trans('from_name'); ?></label>
                     <input type="text" name="from_name" id="from_name" class="form-control"
                            value="<?php
-                               if (!empty($selected_email_template)) {   
-                                   echo $current_email_template->email_template_from_name;                                           
+                               if (!empty($selected_email_template) && !empty($current_email_template)) {
+                                    echo $current_email_template->email_template_from_name;                                           
                                }
                             ?>">
                 </div>
@@ -88,13 +88,14 @@ if ($mdl_settings->get_setting('monospace_amounts') == 1) {
                 <div class="form-group">
                     <label for="cc"><?= Utilities::trans('cc').str_repeat("&nbsp;", 2).Html::label(Icon::show('info-circle', ['framework' => Icon::FAS]),'',['data-toggle'=>'tooltip','title'=>Yii::t('app','Separate your email addresses with a comma.')])?></label>
                     <input type="text" name="cc" id="cc" 
-                           value="<?php if (!empty($selected_email_template)) {echo $current_email_template->email_template_cc;}?>" class="form-control">
+                           value="<?php if (!empty($selected_email_template) && !empty($current_email_template)) {
+                                    echo $current_email_template->email_template_cc;}?>" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="bcc"><?=  Utilities::trans('bcc').str_repeat("&nbsp;", 2).Html::label(Icon::show('info-circle', ['framework' => Icon::FAS]),'',['data-toggle'=>'tooltip','title'=>Yii::t('app','Separate your email addresses with a comma.')])?></label>
                     <input type="text" name="bcc" id="bcc" 
-                           value="<?php if (!empty($selected_email_template)) {echo $current_email_template->email_template_bcc;}?>" class="form-control">
+                           value="<?php if (!empty($selected_email_template) && !empty($current_email_template)) {echo $current_email_template->email_template_bcc;}?>" class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -102,7 +103,9 @@ if ($mdl_settings->get_setting('monospace_amounts') == 1) {
                     <input type="text" name="subject" id="subject" class="form-control"
                            value="<?php if (!empty($selected_email_template)) {echo Utilities::trans('invoice').'#'.$invoice->invoice_id;                                    
                                } else {
-                                   echo $current_email_template->email_template_subject;                                           
+                                      if (!empty($current_email_template) && !empty($current_email_template)){ 
+                                         echo $current_email_template->email_template_subject;                                      
+                                      }
                                }
                             ?>">
                 </div>
@@ -155,7 +158,8 @@ if ($mdl_settings->get_setting('monospace_amounts') == 1) {
                                 </span>
                             </div>
                             <?php
-                              if (!empty($selected_email_template)) {   
+                              $btext = '';
+                              if (!empty($selected_email_template) && !empty($current_email_template)) {   
                                   $btext = rtrim(ltrim($current_email_template->email_template_body));                                           
                               }
                               echo  Html::textarea('body',$btext,['id'=>'body','rows'=>8,'class'=>'email-template-body form-control taggable'])
