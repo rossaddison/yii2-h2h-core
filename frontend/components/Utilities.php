@@ -19,10 +19,10 @@ use frontend\models\Quicknote;
 use frontend\models\Messaging;
 use frontend\models\Carousal;
 use frontend\models\SessionDetail;
+use frontend\models\Company;
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap4\Tabs;
-use frontend\models\Company;
 use dosamigos\google\maps\Map;
 use dosamigos\google\maps\overlays\PolylineOptions;
 use dosamigos\google\maps\overlays\InfoWindow;
@@ -32,8 +32,6 @@ use dosamigos\google\maps\services\TravelMode;
 use dosamigos\google\maps\services\DirectionsRenderer;
 use dosamigos\google\maps\services\DirectionsService;
 use dosamigos\google\maps\services\DirectionsRequest;
-use frontend\modules\subscription\models\paypalagreement;
-use frontend\modules\subscription\components\Configpaypal;
   
 class Utilities extends Component
 {
@@ -205,7 +203,7 @@ public static function soi2soi($prodid,$transid,$amounttotransfer)
 public static function check_for_mandates_approved()
 {
     //query sessiondetails using the current user_id
-    $db = Utilities::userdb_database_code();
+    $db = Utilities::userdb();
     $all = SessionDetail::find()->where(['user_id'=>Yii::$app->user->id])
                                 ->Andwhere(['customer_approved'=>1])
                                 ->Andwhere(['db'=>$db])
@@ -217,7 +215,7 @@ public static function check_for_mandates_approved()
 public static function check_for_mandates_to_acknowledge()
 {
     //query sessiondetails using the current user_id
-    $db = Utilities::userdb_database_code();
+    $db = Utilities::userdb();
     $all = Sessiondetail::find()->where(['user_id'=>Yii::$app->user->id])
                                  ->Andwhere(['customer_approved'=>1])
                                 ->Andwhere(['db'=>$db])
@@ -226,47 +224,9 @@ public static function check_for_mandates_to_acknowledge()
     return $all;    
 }
 
-public static function userLogin_set_database()
-{
-                if (\Yii::$app->user->can('Access db')) {
-                    return \Yii::$app->db;
-                }                
-}
-
 //use by every model
 public static function userdb(){
-      return Yii::$app->session['currentdatabase'];
-}
-
-public static function userdb_database_code(){
-    
- $dbase = '';
- if ( \Yii::$app->user->can('Access db')){ $dbase = 'db';}
- return $dbase;
-}
-
-public static function subscription_exist()
-{
-    $one = paypalagreement::find()
-    ->where(['=','user_id',Yii::$app->user->id]) 
-    //the subscription has not been terminated
-    ->Andwhere(['=','terminated_at',null])
-    //the subscription has been created
-    ->Andwhere(['<>','created_at',null])
-    //the subscription has been approved by user and redirected to us
-    ->Andwhere(['<>','executed_at',null])    
-    //->Andwhere(['>','end_at',date('Y-m-d H:i:s', time())])
-    ->one();
-    if (!empty($one->agreement_id)) {
-        $agreement_id = $one->agreement_id;
-        //use the api to determine if subscription exists with paypal
-        $newapicontext = new Configpaypal();
-        $apiContext = $newapicontext->paypalconfig(); 
-        $agreement = \PayPal\Api\Agreement::get($agreement_id, $apiContext);
-        $status = displayRecursiveResults($agreement,'status');
-        if ($status === 'verified') {return true;} else {return false;}
-    }
-    else {return false;}    
+      return Yii::$app->db;
 }
 
 public static function displayRecursiveResults($arrayObject,$searchkey) {
@@ -283,6 +243,7 @@ public static function setLanguage()
 {
   //if (!empty(Company::findOne(1)->language->one())) (Yii::$app->language = Company::findOne(1)->language;) 
   if  (!empty(Company::findOne(1)->language)){Yii::$app->language = Company::findOne(1)->language;} 
+  else Yii::$app->language = 'en-GB';
 } 
 
 public static function returnLastSignup()
@@ -555,7 +516,7 @@ public static function  Home_tabs_service()
                 //the employee can see Todays Cleans
                'visible' => Yii::$app->user->can('Manage Basic'),
                'content' =>  '<table border="1" class="table striped bordered">'
-                              .Utilities::home_tab3_content()
+                             // .Utilities::home_tab3_content()
                               .'</table>',
            ],
            [
