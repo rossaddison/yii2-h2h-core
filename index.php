@@ -44,11 +44,6 @@ $config = yii\helpers\ArrayHelper::merge(
 );
 (new yii\web\Application($config));
 
-if (!Yii::$app->user->isGuest) {
-    Yii::$app->session['currentdatabase'] = \frontend\components\Utilities::userLogin_set_database(); 
-    \frontend\components\Utilities::setLanguage();
-}
-
 //https://github.com/sjaakp/yii2-pluto/issues/18  Closed.
 Yii::$container->set('yii\widgets\LinkPager', 'yii\bootstrap4\LinkPager');
 
