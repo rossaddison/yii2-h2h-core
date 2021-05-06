@@ -19,6 +19,16 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
 <div class="salesinvoice-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
+    
+    <p>
+        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->invoice_id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => Yii::t('app', 'Are you sure you want to update this item?'),
+                'method' => 'post',
+            ],
+        ]) ?>
+    </p>
    
     <?php
         if (!empty($widgetmessage)) {

@@ -6,6 +6,7 @@
    use frontend\modules\invoice\assets\InvoiceThemeMonospaceAsset;   
    use frontend\modules\invoice\application\helpers\InvoiceHelper;
    use frontend\widgets\Alert;
+   use kartik\icons\Icon;
    use yii\helpers\Url;
    use yii\helpers\Html;
    use yii\web\View;
@@ -128,7 +129,13 @@
                                     <?php if ($payment_method): ?>
                                         <tr>
                                             <td><?= Utilities::trans('payment_method') . ': '; ?></td>
-                                            <td class="text-right"><?php Html::encode($payment_method->payment_method_name); ?></td>
+                                            <td class="text-right"><?php echo Html::encode($payment_method->payment_method_name); ?></td>
+                                        </tr>
+                                    <?php endif; ?>
+                                     <?php if (!empty($invoice->reference)): ?>
+                                        <tr>
+                                            <td><?= Yii::t('app','Your ref:') ?></td>
+                                            <td class="text-right"><?php echo Html::encode($invoice->reference); ?></td>
                                         </tr>
                                     <?php endif; ?>
                                     </tbody>
@@ -155,7 +162,14 @@
                         <input type="hidden" name="invoice_url_key"
                                value="<?= $invoice->invoice_url_key; ?>">
 
-                        <label for="gateway-select"><?= Utilities::trans('online_payment_method'); ?></label>
+                        <label for="gateway-select"><?= Utilities::trans('online_payment_method'); ?>
+                        <?php if (empty($available_gateways)) 
+                            echo Yii::t('app',':'.str_repeat("&nbsp;", 2).'None'. Html::label(Icon::show('info-circle', ['framework' => Icon::FAS]),'',['data-toggle'=>'tooltip','title'=>Yii::t('app','You can pay by credit card or by BACS: Details in the footer of your invoice.')]));
+                        ?>
+                        </label>
+                        <?php if (!empty($available_gateways)) 
+                           //if the payment method is cash the available gateways will be empty
+                        { ?>
                         <select name="gateway" id="gateway-select" class="form-control simple-select">
                             <?php
                             // Display all available gateways
@@ -165,6 +179,7 @@
                                 </option>
                             <?php } ?>
                         </select>
+                        <?php }  ?>
                     </div>
 
                     <br>
@@ -220,7 +235,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <button class="btn btn-success btn-lg ajax-loader" type="submit">
                             <i class="fa fa-credit-card fa-margin"></i>

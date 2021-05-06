@@ -8,7 +8,7 @@ class Mdl_Templates extends Component
 {
     
 //used under ip/menu  view to create dropdownlists for matching templates for settings
-//salesinvoice/viewinvoice will use these different templates depending on what status the invoice has
+//salesinvoice/pdf will use these different templates depending on what status the invoice has
 public function get_invoice_templates($type = 'pdf')
     {
         if ($type == 'pdf') {

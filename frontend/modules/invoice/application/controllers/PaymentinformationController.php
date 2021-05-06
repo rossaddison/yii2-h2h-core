@@ -27,7 +27,7 @@ class PaymentinformationController extends InvoicesController
         parent::init();
         $this->mdl_invoices = new Salesinvoice();
         $this->mdl_amount = new SalesinvoiceAmount();
-        $this->mdl_payment_methods = new SalesinvoiceMethodPay();
+        $this->mdl_payment_methods = new Salesinvoicemethodpay();
         $this->mdl_settings = new Mdl_settings;
         $this->mdl_settings->load_settings();
         $this->datehelper = new DateHelper;
@@ -100,7 +100,7 @@ class PaymentinformationController extends InvoicesController
                 //push the enabled driver to the available drop down list  
                 if (//invoice is not cash and not credit 
                     ($invoice_payment_method == 0) 
-                    //driver is not cash and not credit    
+                    //driver is not cash and not credit   
                     || ($driver_payment_method == 0) 
                     //the invoice and the driver payment methods match        
                     || ($driver_payment_method == $invoice_payment_method)) {
@@ -123,8 +123,11 @@ class PaymentinformationController extends InvoicesController
             'driver_payment_method'=> $driver_payment_method,
             'payment_method' => $payment_method,
             'is_overdue' => $is_overdue,
-            'balance'=> $balance            
+            'balance'=> $balance,                        
         ];
+        if (empty($available_drivers)) {
+            Yii::$app->session->setFlash('error',Yii::t('app','There are no available Online Payment Methods eg. Braintree probably because this invoice is to be paid with cash or by BACS. You can however pay by credit card. <br><br> If you do not want to pay by credit card you can pay by BACS. BACS details are in the footer of the invoice. <br><br> Please include the invoice number above as a reference in your BACS if the invoice does not have a reference. ie Your Ref:')); 
+        }
         return $this->render('paymentinformation', $view_data);
        } else
        {

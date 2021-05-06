@@ -17,8 +17,8 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
                             <label for="settings[default_language]">
-                                <?php 
-                                    Utilities::trans('default_language');
+                                <?=
+                                   Utilities::trans('language');
                                 ?>
                             </label>
                             <select name="settings[default_language]" id="settings[default_language]"
@@ -27,6 +27,25 @@
                                     <option value="<?php echo $value['name']; ?>"
                                         <?php $mdl_settings->check_select($mdl_settings->get_setting('default_language'), $value['name']); ?>>
                                         <?php echo $value['name']; ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">                   
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group">
+                            <label for="settings[date_format]">
+                                <?= Utilities::trans('date_format'); ?>
+                            </label>
+                            <select name="settings[date_format]" id="settings[date_format]"
+                                class="form-control simple-select">
+                                <?php foreach ($date_formats as $date_format) { ?>
+                                    <option value="<?php echo $date_format['setting']; ?>"
+                                        <?php $mdl_settings->check_select($mdl_settings->get_setting('date_format'), $date_format['setting']); ?>>
+                                        <?php echo $current_date->format($date_format['setting']); ?>
+                                        (<?php echo $date_format['setting'] ?>)
                                     </option>
                                 <?php } ?>
                             </select>

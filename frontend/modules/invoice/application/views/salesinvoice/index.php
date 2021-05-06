@@ -81,7 +81,7 @@ $tooltipstatus = Html::tag('span', Yii::t('app','Status'), ['title'=>Yii::t('app
                  ],
                 'urlCreator' => function ($action, $dataProvider, $key, $index) {
                              if (($action === 'link') ) {
-                                 $url = Url::toRoute(['salesinvoice/viewinvoice','id'=>$dataProvider->invoice_id]);
+                                 $url = Url::toRoute(['salesinvoice/pdf','id'=>$dataProvider->invoice_id]);
                                  return $url;
                              }
                  }                

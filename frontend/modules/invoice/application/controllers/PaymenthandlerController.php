@@ -72,6 +72,10 @@ class PaymenthandlerController extends GuestController
 
              // Initialize the gateway
             $driver = Yii::$app->request->post('gateway');
+            if (empty($driver) && !isset($driver)) {
+                    Yii::$app->session->setFlash('error',Yii::t('app','No Payment Gateway has been enabled. Enable under Settings Interface.'));
+                    return $this->redirect(['@web/invoice/paymentinformation/form','invoice_url_key' => $invoice->invoice_url_key]); 
+            }
             $d = strtolower($driver);
             $gateway = $this->initialize_gateway($driver);
 

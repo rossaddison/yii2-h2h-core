@@ -854,7 +854,19 @@ class ProductController extends Controller
         if (!empty($mdl_settings->get_setting('default_invoice_terms'))){
            $invoice->invoice_terms = $mdl_settings->get_setting('default_invoice_terms'); 
         }
-        $invoice->payment_method_id = 1;       
+        if (!empty($mdl_settings->get_setting('invoice_default_payment_method'))){
+            $invoice->payment_method_id = $mdl_settings->get_setting('invoice_default_payment_method');        
+        } else {
+            //0 nothing
+            //1 cash
+            //2 credit card
+            //3 BACS
+            //4 Braintree
+            //5 Elavon
+            //6 Cybersource
+            //7 Worldpay
+            $invoice->payment_method_id = 0;
+        }
         $invoice->save();
         $invoice_id = $invoice->invoice_id;
         $invoice_paid = 0;

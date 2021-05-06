@@ -37,7 +37,7 @@ class SalesinvoiceController extends Controller
                 'access' => 
                             [
                               'class' => \yii\filters\AccessControl::className(),
-                              'only' => ['init','index','create','view','update','viewinvoice'],
+                              'only' => ['init','index','create','view','update','pdf'],
                               'rules' => [
                             [
                                 'allow' => true,
@@ -133,12 +133,6 @@ class SalesinvoiceController extends Controller
         ]);
     }
     
-    public function actionViewinvoice($id)
-    {
-        $model = Salesinvoice::find()->where(['=','invoice_id',$id])->one(); 
-        return $this->getPdf($model);
-    }
-        
     public function actionGuestinvoice($invoice_url_key)
     {       
         $model = Salesinvoice::find()->where(['=','invoice_url_key',$invoice_url_key])->one(); 
@@ -234,8 +228,8 @@ class SalesinvoiceController extends Controller
        } else $this->afterspace = "";
     }
     
-    public function getPdf($id) {
-        $model= $this->findModel($id);
+    public function actionPdf($id) {
+        $model = $this->findModel($id);
         $invoice_template = [];
         $footer = '';
         $content = '';
@@ -257,7 +251,6 @@ class SalesinvoiceController extends Controller
         }    
         //retrieve the invoice template that has been set under settings for views/invoice_templates/pdf
         $content = $this->renderpartial(Utilities::getTemplateholderRelativeUrl() . $invoice_template['setting'],['model' => $model]);
-        //$content = $this->renderpartial('viewinvoice',['model'=>$model]);
         if (!empty($this->mdl_settings->get_setting('pdf_invoice_footer'))) {
           $footer = '<div id="footer">' . $this->mdl_settings->get_setting('pdf_invoice_footer') . '</div>';
         }

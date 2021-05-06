@@ -1,6 +1,7 @@
 <?php
   use frontend\modules\invoice\application\components\Utilities;
   use frontend\modules\invoice\application\components\Currency;
+  use frontend\modules\invoice\application\helpers\DateHelper;
   use frontend\modules\invoice\assets\CoreCustomCssJsAsset;
   use frontend\modules\invoice\assets\InvoiceThemeNoMonospaceAsset;
   CoreCustomCssJsAsset::register($this);
@@ -40,12 +41,15 @@
     <div class="tabbable tabs-below">
         <div class="tab-content">
             <div id="settings-general" class="tab-pane active">
-                <?php                      
+                <?php  
+                       $dateHelper = new DateHelper();
                        echo Yii::$app->controller->renderPartial('partial_settings_general',[
                        'company'=>$company_render_menu,
                        'mdl_settings'=>$mdl_settings_render_menu,
                        'languages'=>$dictionary_render_menu,
                        'default_languages'=>$default_dictionary_render_menu,
+                       'current_date' => new DateTime(),    
+                       'date_formats'=>$dateHelper->date_formats(),    
                        'gateway_currency_codes' =>Currency::all()    
                 ]);?>
             </div>

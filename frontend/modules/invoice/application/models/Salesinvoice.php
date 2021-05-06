@@ -1,7 +1,7 @@
 <?php
 namespace frontend\modules\invoice\application\models;
 
-use frontend\modules\invoice\application\models\SalesinvoiceMethodpay;
+use frontend\modules\invoice\application\models\Salesinvoicemethodpay;
 use frontend\modules\invoice\application\models\SalesinvoiceAmount;
 use frontend\modules\invoice\application\models\SalesinvoiceStatus;
 use frontend\modules\invoice\application\models\SalesinvoicePayment;
@@ -52,7 +52,7 @@ class Salesinvoice extends \yii\db\ActiveRecord
             [['reference'],'default','value'=>'#'],
             [['product_id'], 'exist', 'targetClass' => Product::className(), 'targetAttribute' => 'id','filter'=>function (Query $query) {
                 $query->andWhere(['id' => $this->product_id]);} ],
-            ['payment_method_id', 'exist', 'targetClass' => SalesinvoiceMethodpay::className(), 'targetAttribute' => 'payment_method_id', 'filter' => function (Query $query) {
+            ['payment_method_id', 'exist', 'targetClass' => Salesinvoicemethodpay::className(), 'targetAttribute' => 'payment_method_id', 'filter' => function (Query $query) {
                 $query->andWhere(['payment_method_id' => $this->payment_method_id]);}],
         ];
     }
@@ -107,7 +107,7 @@ class Salesinvoice extends \yii\db\ActiveRecord
     
     public function getPaymentmethod()
     {
-        return $this->hasOne(SalesinvoiceMethodpay::className(),['payment_method_id'=>'payment_method_id']);
+        return $this->hasOne(Salesinvoicemethodpay::className(),['payment_method_id'=>'payment_method_id']);
     }
     
     public function getStatus()
