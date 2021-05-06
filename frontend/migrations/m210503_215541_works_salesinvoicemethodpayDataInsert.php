@@ -30,7 +30,23 @@ class m210503_215541_works_salesinvoicemethodpayDataInsert extends Migration
         'payment_method_id' => '3',
         'payment_method_name' => 'BACS',
     ],
-]
+    [
+        'payment_method_id' => '4',
+        'payment_method_name' => 'Braintree',
+    ],
+    [
+        'payment_method_id' => '5',
+        'payment_method_name' => 'Elavon',
+    ],                            
+    [
+        'payment_method_id' => '6',
+        'payment_method_name' => 'Cybersource',
+    ],
+    [
+        'payment_method_id' => '7',
+        'payment_method_name' => 'Worldpay',
+    ],                            
+    ]
         );
     }
 
