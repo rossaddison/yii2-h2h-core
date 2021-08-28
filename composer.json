@@ -55,7 +55,7 @@
         "monolog/monolog":"*",
         "ruskid/yii2-csv-importer": "dev-master",
         "phpoffice/phpspreadsheet":"*",
-        "league/omnipay": "~3.0",
+        "league/omnipay": "*",
         "omnipay/braintree": "~4.0@dev",
         "lxrco/omnipay-elavon": "~3.0@dev",
         "dioscouri/omnipay-cybersource": "~3.0@dev",
